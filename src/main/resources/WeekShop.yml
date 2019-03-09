@@ -1,0 +1,332 @@
+ShopName: WeekShop
+DisplayName: '&1&lWeek Shop'
+signs:
+  text: '[WeekShop]'
+  NeedPermissionToCreateSign: true
+Command: weekshop
+shop:
+  Monday:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&6%shopitemname%
+    - lore1:&6%shopitemname% &7is %material% day.
+    - lore2:&7Click to purchase cheap %material%.
+    - 'lore3:'
+    - 'lore4: '
+    - 'lore5:&cPrice: %price%.'
+    - 'lore6:&2Receive: %reward%.'
+    RewardType: ITEM
+    Reward:
+    - - type:COBBLESTONE
+      - amount:64
+    PriceType: MONEY
+    Price: 800.0
+    Message: '&7Purchased the &7%shopitemname% &7item.'
+    ExtraPermission: ''
+    InventoryLocation: 11
+    Condition:
+    - type:realweekday
+    - equals:1
+  Tuesday:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&6%shopitemname%
+    - lore1:&6%shopitemname% &7is %material% day.
+    - lore2:&7Click to purchase cheap %material%.
+    - 'lore3:'
+    - 'lore4: '
+    - 'lore5:&cPrice: %price%.'
+    - 'lore6:&2Receive: %reward%.'
+    RewardType: ITEM
+    Reward:
+    - - type:LOG
+      - amount:64
+    PriceType: MONEY
+    Price: 1100.0
+    Message: '&7Purchased the &7%shopitemname% &7item.'
+    ExtraPermission: ''
+    InventoryLocation: 12
+    Condition:
+    - type:realweekday
+    - equals:2
+  Wednesday:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&6%shopitemname%
+    - lore1:&6%shopitemname% &7is %material% day.
+    - lore2:&7Click to purchase cheap %material%.
+    - 'lore3:'
+    - 'lore4: '
+    - 'lore5:&cPrice: %price%.'
+    - 'lore6:&2Receive: %reward%.'
+    RewardType: ITEM
+    Reward:
+    - - type:IRON_INGOT
+      - amount:16
+    PriceType: MONEY
+    Price: 1000.0
+    Message: '&7Purchased the &7%shopitemname% &7item.'
+    ExtraPermission: ''
+    InventoryLocation: 13
+    Condition:
+    - type:realweekday
+    - equals:3
+  Thursday:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&6%shopitemname%
+    - lore1:&6%shopitemname% &7is %material% day.
+    - lore2:&7Click to purchase cheap %material%.
+    - 'lore3:'
+    - 'lore4: '
+    - 'lore5:&cPrice: %price%.'
+    - 'lore6:&2Receive: %reward%.'
+    RewardType: ITEM
+    Reward:
+    - - type:GRILLED_PORK
+      - amount:16
+    PriceType: MONEY
+    Price: 700.0
+    Message: '&7Purchased the &7%shopitemname% &7item.'
+    ExtraPermission: ''
+    InventoryLocation: 14
+    Condition:
+    - type:realweekday
+    - equals:4
+  Friday:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&6%shopitemname%
+    - lore1:&6%shopitemname% &7is %material% day.
+    - lore2:&7Click to purchase cheap %material%.
+    - 'lore3:'
+    - 'lore4: '
+    - 'lore5:&cPrice: %price%.'
+    - 'lore6:&2Receive: %reward%.'
+    RewardType: ITEM
+    Reward:
+    - - type:DIRT
+      - amount:64
+    PriceType: MONEY
+    Price: 300.0
+    Message: '&7Purchased the &7%shopitemname% &7item.'
+    ExtraPermission: ''
+    InventoryLocation: 15
+    Condition:
+    - type:realweekday
+    - equals:5
+  Saturday:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&6%shopitemname%
+    - lore1:&6%shopitemname% &7is %material% day.
+    - lore2:&7Click to purchase cheap %material%.
+    - 'lore3:'
+    - 'lore4: '
+    - 'lore5:&cPrice: %price%.'
+    - 'lore6:&2Receive: %reward%.'
+    RewardType: ITEM
+    Reward:
+    - - type:REDSTONE
+      - amount:64
+    PriceType: MONEY
+    Price: 1500.0
+    Message: '&7Purchased the &7%shopitemname% &7item.'
+    ExtraPermission: ''
+    InventoryLocation: 16
+    Condition:
+    - type:realweekday
+    - equals:6
+  Sunday:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&6%shopitemname%
+    - lore1:&6%shopitemname% &7is %material% day.
+    - lore2:&7Click to purchase cheap %material%.
+    - 'lore3:'
+    - 'lore4: '
+    - 'lore5:&cPrice: %price%.'
+    - 'lore6:&2Receive: %reward%.'
+    RewardType: ITEM
+    Reward:
+    - - type:OBSIDIAN
+      - amount:8
+    PriceType: MONEY
+    Price: 2000.0
+    Message: '&7Purchased the &7%shopitemname% &7item.'
+    ExtraPermission: ''
+    InventoryLocation: 17
+    Condition:
+    - type:realweekday
+    - equals:7
+  Monday_blocked:
+    MenuItem:
+    - name:&cNot available.
+    - type:BLUE_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 11
+  Tuesday_blocked:
+    MenuItem:
+    - name:&cNot available.
+    - type:GREEN_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 12
+  Wednesday_blocked:
+    MenuItem:
+    - name:&cNot available.
+    - type:YELLOW_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 13
+  Thursday_blocked:
+    MenuItem:
+    - name:&cNot available.
+    - type:RED_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 14
+  Friday_blocked:
+    MenuItem:
+    - name:&cNot available.
+    - type:PURPLE_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 15
+  Saturday_blocked:
+    MenuItem:
+    - name:&cNot available.
+    - type:GRAY_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 16
+  Sunday_blocked:
+    MenuItem:
+    - name:&cNot available.
+    - type:CYAN_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 17
+  Moving_1:
+    MenuItem:
+    - name:&c[*]
+    - type:BLUE_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 1
+    Condition:
+    - type:realsecond
+    - 'between:0-5#%45'
+  Moving_2:
+    MenuItem:
+    - name:&c[*]
+    - type:GREEN_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 2
+    Condition:
+    - type:realsecond
+    - 'between:6-10#%45'
+  Moving_3:
+    MenuItem:
+    - name:&c[*]
+    - type:YELLOW_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 3
+    Condition:
+    - type:realsecond
+    - 'between:11-15#%45'
+  Moving_4:
+    MenuItem:
+    - name:&c[*]
+    - type:RED_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 4
+    Condition:
+    - type:realsecond
+    - 'between:16-20#%45'
+  Moving_5:
+    MenuItem:
+    - name:&c[*]
+    - type:PURPLE_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 5
+    Condition:
+    - type:realsecond
+    - 'between:21-25#%45'
+  Moving_6:
+    MenuItem:
+    - name:&c[*]
+    - type:GRAY_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 6
+    Condition:
+    - type:realsecond
+    - 'between:26-30#%45'
+  Moving_7:
+    MenuItem:
+    - name:&c[*]
+    - type:CYAN_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 7
+    Condition:
+    - type:realsecond
+    - 'between:31-35#%45'
+  Moving_8:
+    MenuItem:
+    - name:&c[*]
+    - type:BLACK_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 8
+    Condition:
+    - type:realsecond
+    - 'between:36-40#%45'
+  Moving_9:
+    MenuItem:
+    - name:&c[*]
+    - type:BROWN_STAINED_GLASS_PANE
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 9
+    Condition:
+    - type:realsecond
+    - 'between:41-45#%45'

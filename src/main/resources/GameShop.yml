@@ -1,0 +1,364 @@
+ShopName: GameShop
+DisplayName: '&2&lGameShop'
+Command: gameshop
+Sound:
+  Shop:
+    Open: ENTITY_WITHER_SPAWN:1:1
+    ChangeShop: ENTITY_WITHER_SPAWN:1:1
+signs:
+  text: '[GameShop]'
+  NeedPermissionToCreateSign: true
+shop:
+  sword_wood:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - type:WOOD_SWORD
+      - amount:1
+      - name:&1&lToy Sword
+    PriceType: EXP
+    Price: 4
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 1
+  sword_iron:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - type:IRON_SWORD
+      - amount:1
+      - name:&1&lTraditional Sword
+    PriceType: EXP
+    Price: 10
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 2
+  sword_stone_magic:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - enchantment:FIRE_ASPECT#5
+      - enchantment:KNOCKBACK#4
+      - type:STONE_SWORD
+      - amount:1
+      - name:&1&lAncient Sword
+      - lore:&cCosts %price%.
+    PriceType: EXP
+    Price: 12
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 3
+  sword_iron_strong:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - type:IRON_SWORD
+      - amount:1
+      - name:&1&lTraditional Sword
+    PriceType: EXP
+    Price: 16
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 4
+  sword_diamond:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - enchantment:SHARPNESS#5
+      - enchantment:FIRE_ASPECT#2
+      - type:DIAMOND_SWORD
+      - amount:1
+      - name:&1&lNoble Sword
+    PriceType: EXP
+    Price: 24
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 5
+  weapon_cookie:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - enchantment:KNOCKBACK#10
+      - enchantment:FIRE_ASPECT#10
+      - type:COOKIE
+      - amount:1
+      - name:&4&lKiller Cookie &2&l[*]
+    PriceType: EXP
+    Price: 25
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 6
+  weapon_axe:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - enchantment:SHARPNESS#10
+      - type:DIAMOND_AXE
+      - amount:1
+      - name:&4&lBerserk Axe
+    PriceType: EXP
+    Price: 30
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: Permission.VIP
+    InventoryLocation: 7
+  enchantment_SHARPNESS:
+    MenuItem:
+    - 'lore1:&6Enchant the sword in your hand.'
+    - 'lore2:&cCosts 30 Exp levels.'
+    - amount:1
+    - type:ENCHANTED_BOOK
+    - enchantment:SHARPNESS#4
+    RewardType: enchantment
+    Reward: SHARPNESS#4
+    Message: '&2Successfully enchanted.'
+    PriceType: EXP
+    Price: 30
+    InventoryLocation: 9
+    Condition:
+    - type:placeholdermatch
+    - '%item_in_hand%:match:WOOD_SWORD,STONE_SWORD,IRON_SWORD,GOLD_SWORD,DIAMOND_SWORD'
+  enchantment_SHARPNESS_blocked:
+    MenuItem:
+    - 'lore1:&6Enchant the sword in your hand.'
+    - 'lore2:&cCosts 30 Exp levels.'
+    - 'lore4:&cCan only be used when having a sword in your main hand.'
+    - amount:1
+    - type:ENCHANTED_BOOK
+    - enchantment:SHARPNESS#4
+    Message: '&cYou need to have a sword in your main hand.'
+    RewardType: NOTHING
+    PriceType: NOTHING
+    InventoryLocation: 9
+  bow_low:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - name:&2&lNoob Bow
+      - amount:1
+      - type:BOW
+    - - amount:16
+      - type:ARROW
+    PriceType: EXP
+    Price: 6
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 10
+  bow_medium:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - enchantment:POWER#2
+      - enchantment:FLAME#1
+      - type:BOW
+      - amount:1
+      - name:&2&lHunter Bow
+    - - type:ARROW
+      - amount:16
+    PriceType: EXP
+    Price: 10
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 11
+  bow_strong:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - enchantment:PUNCH#2
+      - enchantment:POWER#4
+      - type:BOW
+      - amount:1
+      - name:&2&lSoldier Bow
+    - - type:ARROW
+      - amount:16
+    PriceType: EXP
+    Price: 20
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 12
+  bow_infinity:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - name:&5&lInfinity Bow
+      - amount:1
+      - type:BOW
+      - enchantment:INFINITY#1
+      - enchantment:POWER#4
+    - - amount:1
+      - type:ARROW
+    PriceType: EXP
+    Price: 25
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 13
+  bow_ranger:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - name:&2&lRanger Bow
+      - amount:1
+      - type:BOW
+      - enchantment:POWER#7
+      - enchantment:PUNCH#10
+    - - amount:16
+      - type:ARROW
+    PriceType: EXP
+    Price: 30
+    Message: '&2You have bought a new weapon for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 14
+  potion_ninja:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - name:&5&lNinja Potion
+      - amount:1
+      - type:POTION
+      - potioneffect:speed#2#120
+      - potioneffect:jump#0#120
+    PriceType: ITEM
+    Price:
+    - - amount:20
+      - type:FEATHER
+    Message: '&2You have bought a new potion for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 28
+  potion_berserk:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - name:&5&lBerserk Potion
+      - amount:1
+      - type:POTION
+      - potioneffect:increase_damage#2#120
+      - potioneffect:confusion#1#120
+    PriceType: ITEM
+    Price:
+    - - amount:1
+      - type:GHAST_TEAR
+    - - amount:1
+      - type:IRON_SWORD
+    Message: '&2You have bought a new potion for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 29
+  potion_ghost:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts 5 Player heads.
+    RewardType: ITEM
+    Reward:
+    - - name:&5&lGhost Potion
+      - amount:1
+      - type:POTION
+      - potioneffect:invisibility#2#120
+      - potioneffect:night_vision#0#120
+    PriceType: ITEM
+    Price:
+    - - amount:5
+      - type:PLAYER_HEAD
+    Message: '&2You have bought a new potion for &c5 Player heads&2.'
+    ExtraPermission: ''
+    InventoryLocation: 30
+    Sound:
+      Shopitem:
+        Purchase: ENTITY_WITHER_DEATH:1:1.0
+  potion_titan:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    RewardType: ITEM
+    Reward:
+    - - name:&4&l[x] &5&lTitan Potion &4&l[x]
+      - amount:1
+      - type:POTION
+      - potioneffect:regeneration#1#120
+    PriceType: POINTS
+    Price: 15
+    Message: '&2You have bought a new potion for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 31
+  potion_poison:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    - lore:&7An example of a default vanilla potion.
+    RewardType: ITEM
+    Reward:
+    - - amount:1
+      - type:LINGERING_POTION
+      - potion:POISON#false#true
+    PriceType: POINTS
+    Price: 10
+    Message: '&2You have bought a new potion for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 32
+  potion_weakness:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    - lore:&7An example of a default vanilla potion.
+    RewardType: ITEM
+    Reward:
+    - - amount:1
+      - type:SPLASH_POTION
+      - potion:WEAKNESS#true#false
+    PriceType: POINTS
+    Price: 6
+    Message: '&2You have bought a new potion for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 33
+  potion_luck:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.
+    - lore:&7An example of a default vanilla potion.
+    RewardType: ITEM
+    Reward:
+    - - amount:1
+      - type:POTION
+      - potion:LUCK#false#false
+    PriceType: POINTS
+    Price: 5
+    Message: '&2You have bought a new potion for &c%price%&2.'
+    ExtraPermission: ''
+    InventoryLocation: 34
+  Back:
+    MenuItem:
+    - lore:&8Back to Menu
+    - name:&cBack
+    - amount:1
+    - type:REDSTONE
+    RewardType: SHOP
+    Reward: menu
+    PriceType: NOTHING
+    Message: '&6Leaving the GameShop...'
+    ExtraPermission: ''
+    InventoryLocation: 36

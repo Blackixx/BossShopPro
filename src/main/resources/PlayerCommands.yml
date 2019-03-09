@@ -1,0 +1,59 @@
+#Note: In order for commands to work properly players need to open the shop via main menu where they are forced to select a target.
+#Because of that simply do not give your players direct permissions to this shop.
+ShopName: PlayerCommandsSecret
+DisplayName: '&6&l%input% &0&lCommands'
+shop:
+  reselecttarget:
+    MenuItem:
+    - name:&f&lSelect other player
+    - lore:&8Click to select an other player.
+    - amount:1
+    - type:PLAYER_HEAD
+    RewardType: SHOP
+    ForceInput: PLAYER
+    ForceInputMessage: '&8Enter the name of a player you want to select.'
+    Reward: PlayerCommandsSecret
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 1
+  gamemode:
+    MenuItem:
+    - name:&f&lAdventure mode
+    - lore:&8Set the gamemode of &l&6%input% &8to adventure mode.
+    - amount:1
+    - type:TORCH
+    RewardType: PLAYERCOMMAND
+    Reward:
+    - 'gamemode 2 %input%'
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 2
+  msgtest:
+    MenuItem:
+    - name:&f&lTest message
+    - lore:&8Send &l&6%input% &8a test message.
+    - amount:1
+    - type:PAPER
+    RewardType: PLAYERCOMMAND
+    Reward:
+    - 'msg %input% this is a test'
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 3
+  kick:
+    MenuItem:
+    - name:&f&lKick
+    - lore:&8Kick &l&6%input% &8from the server.
+    - amount:1
+    - type:DIAMOND_SWORD
+    - itemflag:all
+    RewardType: PLAYERCOMMAND
+    Reward:
+    - 'kick %input%'
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 4

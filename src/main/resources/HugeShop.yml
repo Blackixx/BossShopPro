@@ -1,0 +1,73 @@
+ShopName: HugeShop
+DisplayName: '&l&nPages demonstration'
+signs:
+  text: '[hugeshop]'
+  NeedPermissionToCreateSign: true
+shop:
+  book:
+    MenuItem:
+    - lore:&cThis example item costs %price%
+    - amount:1
+    - type:WRITTEN_BOOK
+    - 'book:&lExample Book#&6Black_ixx'
+    RewardType: ITEM
+    Reward:
+    - - type:WRITTEN_BOOK
+      - amount:1
+      - 'book:&lExample Book#&6Black_ixx'
+      - bookpage:1#Hello World. This is some text at page 1.&0
+      - bookpage:1#&0
+      - bookpage:1#&0Color codes:&0
+      - bookpage:1#&0&11 &22 &33 &44 &55 &66 &77 &88 &99 &00 &aa &bb &cc &dd &ee &ff&r &kk&r &ll&r &mm&r &nn&r &oo&r &rr&0
+      - bookpage:1#&0
+      - bookpage:1#&0
+      - bookpage:1#&0
+      - bookpage:1#&0
+      - bookpage:1#&0
+      - bookpage:1#&0
+      - bookpage:1#&0
+      - bookpage:1#&0End of page 1.
+      - bookpage:2#&4&l&nRules&0
+      - bookpage:2#&0- Do not &csteal&0
+      - bookpage:2#&0- Do not &cspam&0
+      - bookpage:2#&0- Do not &cgrief&0
+      - bookpage:2#&0- Be friendly&0
+      - bookpage:3#&l&nShop introduction&0
+      - bookpage:3#&0
+      - bookpage:3#&0Use '&1/shop&0' in order to open the server shop menu.
+    PriceType: NOTHING
+    Message: '&7You just got an example book for free!'
+    ExtraPermission: ''
+    InventoryLocation: 1
+  stone2:
+    MenuItem:
+    - lore:&cThis example item costs %price%
+    - name:&4&lExample Item 2
+    - amount:1
+    - type:COBBLESTONE
+    RewardType: ITEM
+    Reward:
+    - - name:&8&l%player%'s stone
+      - amount:1
+      - type:COBBLESTONE
+    PriceType: MONEY
+    Price: 1000.0
+    Message: '&7You just purchased an example item for %price%!'
+    ExtraPermission: ''
+    InventoryLocation: 46
+  stone3:
+    MenuItem:
+    - lore:&cThis example item costs %price%
+    - name:&4&lExample Item 3
+    - amount:1
+    - type:SANDSTONE
+    RewardType: ITEM
+    Reward:
+    - - name:&8&l%player%'s stone
+      - amount:1
+      - type:SANDSTONE
+    PriceType: MONEY
+    Price: 1000.0
+    Message: '&7You just purchased an example item for %price%!'
+    ExtraPermission: ''
+    InventoryLocation: 91

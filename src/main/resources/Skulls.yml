@@ -1,0 +1,269 @@
+ShopName: Skulls
+DisplayName: '&e&lSkulls'
+Command: skulls
+signs:
+  text: '[Skulls]'
+  NeedPermissionToCreateSign: false
+shop:
+  skull_custom:
+    MenuItem:
+    - type:PLAYER_HEAD
+    - name:&f&lCustom Skull Texture
+    - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5Y2M1OGFkMjVhMWFiMTZkMzZiYjVkNmQ0OTNjOGY1ODk4YzJiZjMwMmI2NGUzMjU5MjFjNDFjMzU4NjcifX19
+    - lore:&8Click to generate a custom skull
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:%input%
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 1
+    ForceInput: text
+    ForceInputMessage: '&7Please enter the code of a custom skull texture. You can find texture codes here: &6https://minecraft-heads.com/custom/heads&8.\n&7Tip: The texture code usually starts with &6ey &7and can be found within the textboxes when you select a head.\n&7An example is shown here: &6https://i.gyazo.com/15f959cd994247a629720d9de052db78.png&7.\n&7You might need to re-click the custom skull button if you take to much time searching textures.'
+  skull_hamburger:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZlZjFjMjVmNTE2ZjJlN2Q2Zjc2Njc0MjBlMzNhZGNmM2NkZjkzOGNiMzdmOWE0MWE4YjM1ODY5ZjU2OWIifX19
+      - name:&f&lHamburger
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 1
+  skull_grass:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk1ZDM3OTkzZTU5NDA4MjY3ODQ3MmJmOWQ4NjgyMzQxM2MyNTBkNDMzMmEyYzdkOGM1MmRlNDk3NmIzNjIifX19
+      - name:&f&lGrass
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 2
+  skull_stone:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGMxNzU0ODUxZTM2N2U4YmViYTJhNmQ4ZjdjMmZlZGU4N2FlNzkzYWM1NDZiMGYyOTlkNjczMjE1YjI5MyJ9fX0=
+      - name:&f&lStone
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 3
+  skull_chest:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDVjNmRjMmJiZjUxYzM2Y2ZjNzcxNDU4NWE2YTU2ODNlZjJiMTRkNDdkOGZmNzE0NjU0YTg5M2Y1ZGE2MjIifX19
+      - name:&f&lChest
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 4
+  skull_arrow_left:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzM3NjQ4YWU3YTU2NGE1Mjg3NzkyYjA1ZmFjNzljNmI2YmQ0N2Y2MTZhNTU5Y2U4YjU0M2U2OTQ3MjM1YmNlIn19fQ==
+      - name:&f&lArrow left
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 5
+  skull_arrow_right:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0ZjY4YzhmYjI3OWU1MGFiNzg2ZjlmYTU0Yzg4Y2E0ZWNmZTFlYjVmZDVmMGMzOGM1NGM5YjFjNzIwM2Q3YSJ9fX0=
+      - name:&f&lArrow right
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 6
+  skull_arrow_up:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzNjZjE2NmE4MjZkODU1NDU0ZWQ0ZDRlYTVmZTMzZjNkZWVhYTQ0Y2NhYTk5YTM0OGQzOTY4NWJhNzFlMWE0ZiJ9fX0=
+      - name:&f&lArrow up
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 7
+  skull_arrow_down:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzhjYTc2MTVjYjgzN2Y2OTRlNDk2ZmY4YTk4NTNjZDdkYjVmZDg1NTI5ZGNhZDk4Yzc4YmEyNmMzZTRmNjg3In19fQ==
+      - name:&f&lArrow down
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 8
+  skull_cactus:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmY1ODViNDFjYTVhMWI0YWMyNmY1NTY3NjBlZDExMzA3Yzk0ZjhmOGExYWRlNjE1YmQxMmNlMDc0ZjQ3OTMifX19
+      - name:&f&lCactus
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 9
+  skull_log_oak:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRhYWRhNGQ5ZmNlZGE5MDE4NjkxOGQ2Y2EzNWI5YTBlYWQ4ZTRiMTRjOWQ5NDI3MTU3ZWU5YjkzMzlkN2IxIn19fQ==
+      - name:&f&lOak log
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 10
+  skull_log_spruce:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2I4NDZjYTcxYmIzMzIxYzA5MDZiYjFiNTczYWFiYTIyNGE1MjhlYTgyNjM5MmRiM2I1N2YzNGQzMDcxZDMifX19
+      - name:&f&lSpruce log
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 11
+  skull_log_birch:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTk5MWYzYjczZWJiOWRlYzkxZWRkYzgzNjFjYTJmZWNmNTI4MGQyYzczM2VkYTllY2I2OTVmODNkMTU4MCJ9fX0=
+      - name:&f&lBirch log
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 12
+  skull_log_jungle:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjIzNWU5YjgzMmFlYjE4OGIzNTk1M2ZjMzhjMmM4ZjU1Y2U3YTQ0YTEyZGY4YmM5MzIxNzBmY2Q2NzU3YmYzIn19fQ==
+      - name:&f&lJungle log
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 13
+  skull_lapis:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY1NGI2ZDk0OWE0NmQ4NmVjMDE1NDhjODkyYTU2OGI4Y2RhZDQ2NDZjYjJlMjk2ZDBkZDU4YWY3Nzk0NzEifX19
+      - name:&f&lLapis ore
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 14
+  skull_diamond:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTFlZDlhYmY1MWZlNGVhODRjZmNiMjcyOTdmMWJjNTRjZDM4MmVkZjg1ZTdiZDZlNzVlY2NhMmI4MDY2MTEifX19
+      - name:&f&lDiamond ore
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 15
+  skull_eye:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdkYjE5MjNkMDNjNGVmNGU5ZjZlODcyYzVhNmFkMjU3OGIxYWZmMmIyODFmYmMzZmZhNzQ2NmM4MjVmYjkifX19
+      - name:&f&lEye
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 16
+  skull_chicken:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDViNGUyMjI5ZGU5NGMxNWRiZmNmMmJhZTQ5ZTgwZjBlNGQ2NTkxNGE0OWEzMTJjMDQxNzkyOWEyOWJiNyJ9fX0=
+      - name:&f&lChicken
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 17
+  skull_bookcase:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&8Click to get it
+    RewardType: item
+    Reward: 
+    - - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2Y2YmY5NThhYmQ3ODI5NWVlZDZmZmMyOTNiMWFhNTk1MjZlODBmNTQ5NzY4MjllYTA2ODMzN2MyZjVlOCJ9fX0=
+      - name:&f&lBookcase
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 18
+  Back:
+    MenuItem:
+    - type:REDSTONE
+    - amount:1
+    - name:&cBack
+    - lore:&8Back to Menu
+    RewardType: SHOP
+    Reward: menu
+    PriceType: NOTHING
+    Message: '&6Leaving the Skulls menu...'
+    ExtraPermission: ''
+    InventoryLocation: 27

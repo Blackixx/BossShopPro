@@ -1,0 +1,116 @@
+ShopName: Commands
+DisplayName: '&2&lCommands'
+signs:
+  text: '[Commands]'
+  NeedPermissionToCreateSign: true
+shop:
+  warp_spawn:
+    MenuItem:
+    - name:&f&l&nWarp:&0 &2&lSpawn
+    - amount:1
+    - type:COMPASS
+    RewardType: PLAYERCOMMAND
+    Reward:
+    - warp spawn
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 1
+  warp_pvp:
+    MenuItem:
+    - name:&f&l&nWarp:&0 &2&lPvP
+    - amount:1
+    - type:DIAMOND_SWORD
+    - enchantment:SHARPNESS#5
+    - itemflag:all
+    RewardType: PLAYERCOMMAND
+    Reward:
+    - warp pvp
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 2
+  command_day:
+    MenuItem:
+    - lore:&cThis item is visible at night only.
+    - name:&f&l&nCommand:&0 &2&lDay
+    - amount:1
+    - type:TORCH
+    RewardType: COMMAND
+    Reward:
+    - time day %world%
+    PriceType: NOTHING
+    Message: '&8Set time to day.'
+    ExtraPermission: ''
+    InventoryLocation: 3
+    Condition:
+    - type:worldtime
+    - between:11615:24000
+  command_night:
+    MenuItem:
+    - lore:&cThis item is visible at day only.
+    - name:&f&l&nCommand:&0 &2&lNight
+    - amount:1
+    - type:NETHERRACK
+    RewardType: COMMAND
+    Reward:
+    - time night %world%
+    PriceType: NOTHING
+    Message: '&8Set time to night.'
+    ExtraPermission: ''
+    InventoryLocation: 3
+    Condition:
+    - type:worldtime
+    - between:0:11615
+  command_fly:
+    MenuItem:
+    - lore:&cThis example command is executed with op permissions.
+    - name:&f&l&nCommand:&0 &2&lFly
+    - amount:1
+    - type:FEATHER
+    RewardType: PLAYERCOMMANDOP
+    Reward:
+    - fly
+    PriceType: NOTHING
+    Message: ''
+    ExtraPermission: ''
+    InventoryLocation: 4
+  command_feed:
+    MenuItem:
+    - 'lore:&cThis example command can not be executed in the "survival" world.'
+    - name:&f&l&nCommand:&0 &2&lFeed
+    - amount:1
+    - type:GRILLED_PORK
+    RewardType: PLAYERCOMMANDOP
+    Reward:
+    - feed %player%
+    PriceType: NOTHING
+    Message: '&6Enjoy your meal!'
+    ExtraPermission: ''
+    InventoryLocation: 5
+    Condition:
+    - type:world
+    - dontmatch:survival
+  command_feed_blocked:
+    MenuItem:
+    - 'lore:&cThis example command can not be executed in the "survival" world.'
+    - name:&f&l&nCommand:&0 &2&lFeed
+    - amount:1
+    - type:PORK
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: '&cCan not be executed in the survival world.'
+    ExtraPermission: ''
+    InventoryLocation: 5
+  Back:
+    MenuItem:
+    - type:REDSTONE
+    - amount:1
+    - name:&cBack
+    - lore:&8Back to Menu
+    RewardType: SHOP
+    Reward: menu
+    PriceType: NOTHING
+    Message: '&6Leaving the ItemShop...'
+    ExtraPermission: ''
+    InventoryLocation: 27

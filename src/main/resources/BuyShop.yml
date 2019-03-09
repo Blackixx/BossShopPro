@@ -1,0 +1,245 @@
+ShopName: BuyShop
+DisplayName: '&9&lBuyShop'
+Command: buyshop
+signs:
+  text: '[BuyShop]'
+  NeedPermissionToCreateSign: true
+shop:
+  Wool:
+    MenuItem:
+    - 'lore:&c10 Red, &110 Blue, &e10 Yellow and &a10 Green Wool #&cPrice: 400 Money'
+    - name:&9Colored Wool
+    - amount:40
+    - type:YELLOW_WOOL
+    RewardType: ITEM
+    Reward:
+    - - amount:10
+      - type:RED_WOOL
+    - - amount:10
+      - type:BLUE_WOOL
+    - - amount:10
+      - type:YELLOW_WOOL
+    - - amount:10
+      - type:GREEN_WOOL
+    PriceType: MONEY
+    Price: 400.0
+    Message: '&eYou bought colored Wool! Money left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 1
+  Diamonds:
+    MenuItem:
+    - type:DIAMOND
+    - amount:5
+    - name:&95 Diamonds
+    - 'lore1:&eClick &2left &eto buy &b%reward% &efor &c%price%&e.'
+    - 'lore2:&eClick &2right &eto sell &c%price_right% &efor &b%reward_right%&e.'
+    RewardType: ITEM
+    Reward:
+    - - type:DIAMOND
+      - amount:5
+    PriceType: MONEY
+    Price: 5000
+    Message: '&eYou bought %reward%! Money left: &c%left%'
+    RewardType_right: MONEY
+    Reward_right: 2500
+    PriceType_right: ITEM
+    Price_right:
+    - - type:DIAMOND
+      - amount:5
+    Message_right: '&eYou just sold %price_right%!'
+    ExtraPermission: ''
+    InventoryLocation: 3
+  ShadowArmor:
+    MenuItem:
+    - '%rewarditem_1%'
+    - 'lore:&cPrice: 1500 Money'
+    RewardType: ITEM
+    Reward:
+    - - type:LEATHER_CHESTPLATE
+      - amount:1
+      - name:&5ShadowArmor
+      - color:110#10#140
+      - enchantment:PROTECTION#10
+    PriceType: MONEY
+    Price: 1500
+    Message: '&eYou bought 1 %itemname%! &eMoney left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 5
+  Obsidian:
+    MenuItem:
+    - type:OBSIDIAN
+    - amount:64
+    - name:&964 Obsidian
+    - 'lore:&cPrice: 10000 Money'
+    RewardType: ITEM
+    Reward:
+    - - type:OBSIDIAN
+      - amount:64
+    PriceType: MONEY
+    Price: 10000
+    Message: '&eYou bought %reward%! Money left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 7
+  GodApple:
+    MenuItem:
+    - '%rewarditem_1%'
+    - name:&9%shopitemname%
+    - 'lore:&cPrice: 10000 Money'
+    RewardType: ITEM
+    Reward:
+    - - type:ENCHANTED_GOLDEN_APPLE
+      - amount:1
+    PriceType: MONEY
+    Price: 10000
+    Message: '&eYou bought 1 %itemname%! &eMoney left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 9
+  EnchantUnbreaking:
+    MenuItem:
+    - type:ENCHANTED_BOOK
+    - amount:1
+    - name:&4[crown] &cEnchantment &4[crown]
+    - 'lore1:&8Enchants the Item in your hand.'
+    - 'lore2:&cPrice: 25 Exp Level'
+    - 'lore4:&cOnly for VIPs!'
+    - enchantment:UNBREAKING#3
+    RewardType: ENCHANTMENT
+    Reward: UNBREAKING#3
+    PriceType: EXP
+    Price: 25
+    Message: '&eThe Enchantment Unbreaking III was added to your item!'
+    ExtraPermission: Permission.Vip
+    InventoryLocation: 19
+  BossSword:
+    MenuItem:
+    - type:DIAMOND_SWORD
+    - amount:1
+    - name:&4[*] &c%shopitemname% &4[*]
+    - 'lore:&cPrice: 2000 Points'
+    - enchantment:SHARPNESS#5
+    - enchantment:FIRE_ASPECT#2
+    RewardType: ITEM
+    Reward:
+    - - type:DIAMOND_SWORD
+      - amount:1
+      - name:&cBossSword
+      - lore:&8&o%player%'s Sword
+      - enchantment:SHARPNESS#5
+      - enchantment:FIRE_ASPECT#2
+    PriceType: POINTS
+    Price: 2000
+    Message: '&eYou bought 1 %itemname%! Money left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 21
+    Sound:
+      Shopitem:
+        Purchase: ENTITY_WITHER_DEATH:1:1.0
+  Food:
+    MenuItem:
+    - '%rewarditem_1%'
+    - lore:&cCosts %price%.#&8Food is shown when you are hungry only.
+    - name:&2&lFood
+    RewardType: ITEM
+    Reward:
+    - - amount:16
+      - type:GRILLED_PORK
+    PriceType: MONEY
+    Price: 200.0
+    Message: '&cYou just bought &2%reward% &cfor &2%price%.'
+    ExtraPermission: ''
+    InventoryLocation: 23
+    Condition:
+    - type:hunger
+    - under:20
+  Food_blockade:
+    MenuItem:
+    - name:&4&lNot available
+    - type:BARRIER
+    RewardType: NOTHING
+    PriceType: NOTHING
+    Message: '&cNot available!'
+    ExtraPermission: ''
+    InventoryLocation: 23
+  Complex:
+    MenuItem:
+    - type:TORCH
+    - amount:1
+    - name:&9Torch
+    - 'lore1:&cAn example that shows how complex shopitems can be.'
+    - 'lore2:&eClick &2left &eto buy &b%reward% &efor &c%price%&e.'
+    - 'lore3:&eClick &2right &eto sell &c%price_right% &efor &b%reward_right%&e.'
+    - 'lore4:&eClick your &2mousewheel &eto sell &c%price_middle% &efor &b%reward_middle%&e.'
+    RewardType: ITEM
+    Reward:
+    - - type:TORCH
+      - amount:16
+    PriceType: MONEY
+    Price: 160
+    Message: '&eYou bought %reward%! Money left: &c%left%'
+    RewardType_right: MONEY
+    Reward_right: 80
+    PriceType_right: ITEM
+    Price_right:
+    - type:TORCH
+    - amount:16
+    Message_right: '&eYou just sold %price_right%!'
+    RewardType_middle: MONEY
+    Reward_middle: 5
+    PriceType_middle: ITEMALL
+    Price_middle:
+    - - type:TORCH
+    Message_middle: '&eYou just sold %price_middle%!'
+    ExtraPermission: ''
+    InventoryLocation: 25
+  VeryComplex:
+    MenuItem:
+    - type:LOG
+    - amount:1
+    - name:&9Log
+    - 'lore1:&cAn other example that shows how complex shopitems can be.'
+    - 'lore2:&eClick &2left &eto buy &b%reward% &efor &c%price%&e.'
+    - 'lore3:&eClick &2right &eto sell &c%price_right% &efor &b%reward_right%&e.'
+    - 'lore4:&eClick &2shift left &eto buy &b%reward_shift_left% &efor &c%price_shift_left%&e.'
+    - 'lore5:&eClick &2shift right &eto sell &c%price_shift_right% &efor &b%reward_shift_right%&e.'
+    RewardType: ITEM
+    Reward:
+    - - type:LOG
+      - amount:16
+    PriceType: MONEY
+    Price: 100
+    Message: '&eYou bought %reward%! Money left: &c%left%'
+    RewardType_right: MONEY
+    Reward_right: 50
+    PriceType_right: ITEM
+    Price_right:
+    - - type:LOG
+      - amount:16
+    Message_right: '&eYou just sold %price_right%!'
+    RewardType_shift_left: ITEMALL
+    Reward_shift_left:
+    - type:LOG
+    - amount:1
+    PriceType_shift_left: MONEY
+    Price_shift_left: 10
+    Message_shift_left: '&eYou bought %reward_shift_left%! Money left: &c%left%'
+    RewardType_shift_right: MONEY
+    Reward_shift_right: 5
+    PriceType_shift_right: ITEMALL
+    Price_shift_right:
+    - type:LOG
+    - amount:1
+    Message_shift_right: '&eYou just sold %price_shift_right%!'
+    ExtraPermission: ''
+    InventoryLocation: 27
+  Back:
+    MenuItem:
+    - lore:&8Back to Menu
+    - name:&cBack
+    - amount:1
+    - type:REDSTONE
+    RewardType: SHOP
+    Reward: menu
+    PriceType: NOTHING
+    Message: '&6Leaving the ItemShop...'
+    ExtraPermission: ''
+    InventoryLocation: 45

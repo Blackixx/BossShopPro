@@ -1,0 +1,96 @@
+ShopName: PointShop
+DisplayName: '&1&lPointShop &a[v]'
+signs:
+  text: '[PointShop]'
+  NeedPermissionToCreateSign: true
+shop:
+  100Points:
+    MenuItem:
+    - type:DIAMOND
+    - amount:1
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
+    RewardType: POINTS
+    Reward: 100
+    PriceType: MONEY
+    Price: 1000
+    Message: '&eYou bought %reward%! Money left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 1
+  500Points:
+    MenuItem:
+    - type:DIAMOND
+    - amount:5
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
+    RewardType: POINTS
+    Reward: 500
+    PriceType: MONEY
+    Price: 5000
+    Message: '&eYou bought %reward%! Money left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 2
+  1000Points:
+    MenuItem:
+    - type:DIAMOND
+    - amount:10
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
+    RewardType: POINTS
+    Reward: 1000
+    PriceType: MONEY
+    Price: 10000
+    Message: '&eYou bought %reward%! Money left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 3
+  500Money:
+    MenuItem:
+    - type:EMERALD
+    - amount:5
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
+    RewardType: MONEY
+    Reward: 500
+    PriceType: POINTS
+    Price: 100
+    Message: '&eYou bought %reward%! Points left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 19
+  1000Money:
+    MenuItem:
+    - type:EMERALD
+    - amount:10
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
+    RewardType: MONEY
+    Reward: 1000
+    PriceType: POINTS
+    Price: 200
+    Message: '&eYou bought %reward%! Points left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 20
+  5000Money:
+    MenuItem:
+    - type:EMERALD
+    - amount:50
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
+    RewardType: MONEY
+    Reward: 5000
+    PriceType: POINTS
+    Price: 1000
+    Message: '&eYou bought %reward%! Points left: &c%left%'
+    ExtraPermission: ''
+    InventoryLocation: 21
+  Back:
+    MenuItem:
+    - type:REDSTONE
+    - amount:1
+    - name:&cBack
+    - lore:&8Back to Menu
+    RewardType: SHOP
+    Reward: menu
+    PriceType: NOTHING
+    Message: '&6Leaving the PointShop...'
+    ExtraPermission: ''
+    InventoryLocation: 27

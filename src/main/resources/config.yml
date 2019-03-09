@@ -1,0 +1,250 @@
+# BossShopPro
+# by Felix Neubauer
+# Check out following page for more information: https://www.spigotmc.org/wiki/bossshoppro-configuration
+#
+# BossShopPro Wiki Page:
+# https://www.spigotmc.org/wiki/bossshoppro
+#
+# Hey!
+# You got BossShopPro? Awesome.
+# Believe me: Setting it up is simple.
+#
+# You can either set it up the classic (And boring/hard) way with editing the configuration files by hand
+# OR you can edit it the Boss way: Use "BossShopProConfigure" (An awesome software which allows simple Setup with a few clicks).
+# You can download BossShopProConfigure here: https://www.spigotmc.org/wiki/bossshoppro-tool
+#
+#
+#
+#
+#
+# EnableSigns:
+# If set EnableSigns to 'false' BossShop signs will be disabled.
+EnableSigns: true
+#
+#
+# MainShop:
+# That's the name of your Main Shop. Whenever someone uses '/bossshop', this Shop is opened. Other Shops can be opened via '/bossshop <shop>'.
+# Also, all Shops can be opened via Sign (If Signs are enabled) or with clicking a specific Item (If you have 'GuiShopManager' installed).
+MainShop: Menu
+#
+#
+# HideItemsPlayersDoNotHavePermissionsFor:
+# If enabled all Items your players do not have permissions for will be "hidden". That way you can create cool things like upgrade systems:
+# Put multiple Items on the same slot and hide the ones which are not available any more. For example if you work with upgrades, hide the old upgrade and show the next one.
+HideItemsPlayersDoNotHavePermissionsFor: false
+#
+#
+# CanPlayersSellItemsWithGreaterEnchants:
+# If enabled players can sell items with greater enchants than needed to a shop that allows to sell items. That might be helpful when dealing with items with bad enchants,
+# but also might lead to accidently selling items below their worth.
+CanPlayersSellItemsWithGreaterEnchants: false
+#
+#
+# EnableTransactionLog:
+# If enabled all Transactions will be logged in a TransactionLog file.
+EnableTransactionLog: false
+#
+#
+# SearchSubfoldersForShops:
+# If enabled BossShop will search children folders of the '/shops' directory for shop files. That can be quite helpful for sorting, when dealing with a big amount of shops.
+SearchSubfoldersForShops: false
+#
+#
+# AllowUnsafeEnchantments:
+# If enabled players can use any Enchantment reward with any level to any item.
+AllowUnsafeEnchantments: false
+#
+#
+# AllowSellingDamagedItems:
+# If enabled the damage weapons, armor or tools have taken is ignored when players sell them.
+AllowSellingDamagedItems: false
+#
+#
+# CheckStackSize:
+# If disabled players can receive any itemstack with an amount up to 64, even if the material has a limited stacksize in Vanilla. That way players can get stacked tools and armor too.
+# It is recommended to keep this setting enabled to prevent players from enchanting multiple tools, weapons or armor parts at once.
+CheckStackSize: true
+#
+#
+# InventoryFullDropItems:
+# If enabled and players purchase items which do not fit into their inventory these will be dropped on the ground at their location. If disabled the players will instead get a warning message.
+InventoryFullDropItems: true
+#
+#
+# ClickDelay:
+# Delay in milliseconds between successful clicks in order to prevent click spam.
+ClickDelay: 200
+#
+#
+# ClickSpamKick:
+## ClickDelay:
+## If the delay between two shopitem clicks is faster than the given time in milliseconds it will be detected as clickspam. 
+#
+## Warnings:
+## Here you can define the amount of warnings the player will get before being kicked for clickspam.
+#
+## ForgetTime:
+## After the given time in milliseconds the plugin will forget offensive clickspam of a player. Note: When a player leaves the server his clickspam is forgotten too.
+ClickSpamKick:
+  ClickDelay: 100
+  Warnings: 1
+  ForgetTime: 5000
+#
+#
+# MaxLineLength:
+# The maximum amount of characters in a lore line before it gets cut into multiple lines. Set the value to '-1' if you never want lines to be split.
+MaxLineLength: 42
+#
+#
+# InputTimeOut:
+# When BossShopPro expects player input (because of addons like PlayerShops or the 'ForceInput' feature) it waits for player chat and uses the next chat message as input.
+# If the player does not input anything in the chat BossShopPro will after the defined timeout (in seconds) cancel the action and stop waiting for player input.
+InputTimeout: 45
+#
+#
+# MoneyDisplay:
+# Here you can define how the balance of the player will be displayed.
+# Every entry of the list has following structure: <needed>:<to_cut>:<decimal_place>:<formatting>
+# <needed>: This is the amount of money needed in order for the line to be chosen
+# <to_cut>: This is the amount of places to be cut out of the number
+# <decimal_place>: The number will be rounded to the given decimal place
+# <formatting>: Here you enter the final look, using %number% as placeholder for the modified number
+# Important: The order of the list is descending. The first entry where the needed number fits is chosen.
+MoneyDisplay:
+  Enabled: true
+  List:
+  - 1000000000000:12:2:%number% trillion
+  - 1000000000:9:2:%number% billion
+  - 1000000:6:2:%number% million
+  - 1000:3:2:%number%k
+  - 0:0:2:%number%
+#
+#
+# PointsDisplay:
+# Here you can define how the points balance of the player will be displayed.
+# It has the same structure as the MoneyDisplay list. Points can not have as high numbers as Money and do not have decimals.
+PointsDisplay:
+  Enabled: false
+  List:
+  - 1000000:6:2:%number% million
+  - 1000:3:2:%number%k
+  - 0:0:0:%number%
+#
+#
+# NumberDisplay:
+# Here you can define the general display of numbers.
+# Check out following page for more information: https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html
+## Locale:
+## Examples:
+## en_US -> 123,456.78
+## de_DE -> 123.456,78
+## Some formats are not displayed properly by the minecraft client because of the way it renders text.
+#
+## GroupingSize: Here you can modify the grouping size of numbers (the amount of digits between separators). Set it to -1 if you want to disable grouping.
+NumberDisplay:
+  Locale: en_US
+  GroupingSize: 3
+#
+#
+# SellAllPlaceholderShowFinalReward:
+# If enabled the '%reward%' placeholder of shopitems with pricetype "ItemAll" will show the total reward the player will receive when selling all items of one kind. 
+# Else '%reward%' will show the reward the player will get for every single item he sells. This is a neat feature, however it requires checking the players inventory for items every
+# time the shop is opened. It might cause lag in case of being used many times by a single shoppage. 
+# If the player does not have any items to sell the text defined in messages.yml/"ItemAllEach" will be displayed instead of zero.
+# 'Reward: %money%' would for example show 'Reward: 100 each' with the default "ItemAllEach" text.
+# (Rewardtype "ItemAll" works analog and uses this setting too)
+SellAllPlaceholderShowFinalReward: false
+#
+#
+# ExpUseLevels: If enabled rewards of type 'Exp' stand for "Exp level". Set this to false if you want to sell plain exp. This affects rewards only.
+ExpUseLevels: true
+#
+#
+# AutoRefreshDelay:
+# Shops are refreshed through following ways:
+# - Static shops: shops that only contain fix and static items do not need to be refreshed
+# - Shops with serverpinging: Each time the servers are checked for their playeramount and motd these shops are refreshed
+# - When a player purchases something that might affect the look of the shop the shop is updated (for example when a player purchases permissions or spends money)
+# - Optionally all shops are updated every x seconds: If you have advanced shops you might work with conditions like hunger and health. If you do that you might want your shops
+#   to automatically update after some time in order to make sure that the shops adapt to your players circumstances in live-time.
+# Here you can define the refresh-delay in ticks (20 ticks = 1 second). If you do not want the shops to auto-refresh set the value to -1.
+AutoRefreshDelay: 100
+#
+#
+# ServerPinging:
+# Connects with servers and allows to use their player-count and motd in placeholders.
+## Enabled:
+## Set this to true if you want to connect with other servers.
+#
+## Delay:
+## You can define the pinging delay in ticks (20 ticks = 1 second).
+#
+## FixConnector:
+## If BossShopPro is not able to connect with servers with the selected connector type it will try out different connector types. If you do know that the current connector type is correct and
+# the servers to ping are just offline you can set "FixConnector" to true in order to prevent the plugin from trying out other connector types.
+#
+## Timeout:
+## Here you can define the time (in milliseconds) this plugin will wait until it will cancel the pinging process due to not being able to ping a server.
+#
+## WaitTimeAfterFail:
+## BossShopPro will wait the given time until it re-tries connecting with a server if it was unable to ping it last time.
+#
+## List:
+## The list of servers to ping consists of lines that look like following: <name>:<server ip>:<server port>
+## The name is later used in the placeholders: %players:<name>% and %motd:<name>%
+ServerPinging:
+  Enabled: false
+  Delay: 45
+  FixConnector: false
+  Timeout: 4000
+  WaitTimeAfterFail: 4500
+  List:
+  - snapcraft:mc.snapcraft.net:25565
+# 
+#
+# BungeeCord:
+# Set to true if working with BungeeCord.
+BungeeCord : false
+#
+# 
+# MultiplierGroups:
+# Here you can set up Price Multipliers.
+# If enabled, this MultiplierGroups will be loaded and players with the right permissions will get a price decrease/increase.
+# The lines of the List look like this: <Permission>:<Type>:<Multiplier>:<buy/sell/both>.
+# <Permission>: Here you can put in whatever you want. If you want a group to have this multiplier, just give that group your permission.
+# <Type>: Multiplier Type. Valid: Money, Points, Exp
+# <Multiplier>: Price = old Price * Multiplier
+# <price/reward/both>: Here you enter the range of the multiplier. It can affect either prices, rewards or both. If using prices or rewards the value is multiplied by the multiplier.
+# In case of using range "both" the prices are multiplied by the given multiplier and the rewards are divided by the given multiplier. If you do not define a range the plugin will automatically select "both".
+# Players can be in multiple "MultiplierGroups" at the same time.
+MultiplierGroups:
+  Enabled: false
+  List:
+  - BossShop.PriceMultiplier.Points:points:0.75:price
+  - BossShop.PriceMultiplier.Money:money:0.5:price
+  - BossShop.RewardMultiplier.Money:money:2.0:reward
+  - BossShop.BothMultiplier.Exp:exp:0.8
+#
+#
+# PointsPlugin:
+# Only important if you work with Points.
+# Here you can enter whatever you want. BossShop will always detect the Points Plugin you are using and it will hook into it
+# (If you are using one). If you use multiple Points Plugins fill in the name of the one that you want BossShop to work with.
+# 'PlayerPoints', 'CommandPoints', 'EnjinMinecraftPlugin'/'Enjin', 'PointsAPI', 'Jobs', 'TokenEnchant', 'Kingdoms', 'MySQL-Tokens', 'VotingPlugin', 'MySQLTokens'.
+PointsPlugin: auto-detect
+#
+#
+# Sound:
+# Sound sent to a player. Can be turned off by setting it to ''. Individual sound settings can be added to the configuration sections of your shops and shopitems, else they will inherit the sound settings of their parent.
+# Formatting: <sound name>:<volume>:<pitch>. You can find all available sound names here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+Sound:
+  Shopitem:
+    Click: 'UI_BUTTON_CLICK:1:1'
+    Purchase: 'ENTITY_PLAYER_LEVELUP:1:1.8'
+    NoPermission: 'ENTITY_BLAZE_DEATH:1:1'
+    NotEnoughMoney: 'ENTITY_SHULKER_HURT:1:0.8'
+  Shop:
+    ChangePage: 'UI_BUTTON_CLICK:0.2:1'
+    ChangeShop: 'BLOCK_CHEST_OPEN:0.2:1'
+    Open: 'ENTITY_ELDER_GUARDIAN_CURSE:1:1.8'
+    Close: ''

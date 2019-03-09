@@ -1,0 +1,4 @@
+BossShopPro:
+* RewardType OR with random reward (chances can be defined by user)
+
+* Optionale Funktion bei jedem Shop: lock-gui: true (dann kann Inventar nicht weggeklickt werden)

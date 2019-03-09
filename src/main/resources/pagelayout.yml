@@ -1,0 +1,71 @@
+# BossShopPro
+# by Felix Neubauer
+# Check out following page for more information: https://www.spigotmc.org/wiki/bossshoppro-configuration#
+#
+#
+#
+# ShowIfMultiplePagesOnly: 
+# If set to true the layout shopitems are only shown as soon as the inventory size is exceeded and multiple pages need to be created.
+# If you want to display the layout shopitems in any case set this to 'false'.
+ShowIfMultiplePagesOnly: true
+#
+#
+# MaxRows:
+# This is the amount of rows that a shop can have without needing a second page. '6' is the limit but you can optionally make shops smaller.
+MaxRows: 6
+#
+#
+# ReservedSlotsStart:
+# Here you enter the first slot that should be reserved in case of the layout being active (When multiple pages are needed or 'ShowIfMultiplePagesOnly' is set to 'false').
+# All higher slots of the same page including the given slot are reserved: Shopitems will automatically be put into the next page if they are equal or higher than the given slot.
+# You can use the reserverd slots to put in static layout shopitems. In this case the last (6.) row of every page is reserved in case of needing multiple pages.
+ReservedSlotsStart: 46
+#
+#
+# items:
+# Here you set up the shopitems that you want to be displayed in case of the layout being active. They are set up just like every other shopitem and can work with conditions.
+# Tip: Here you can use the additional conditions flag "page" that allows you to display components depending on the current page. 
+# Also you can use the variable %maxpage% inside page conditions. In this example there is a 'previous' button, that is shown when the player has a page higher than 1 opened
+# and there is a 'next' button, which is shown when their is an other page after the current one. Also there is a 'menu' button that is always visible as soon as the layout is active.
+items:
+  Previous:
+    RewardType: page
+    Reward: previous
+    PriceType: nothing
+    MenuItem:
+    - type:ARROW
+    - amount:1
+    - name:&f&lPrevious
+    - 'lore:&7Go back to the previous page.'
+    Message: ''
+    InventoryLocation: 46
+    ExtraPermission: ''
+    Condition:
+    - type:page
+    - over:1
+  Menu:
+    RewardType: shop
+    Reward: menu
+    PriceType: nothing
+    MenuItem:
+    - type:CHEST
+    - name:&9&l&nMenu
+    - 'lore:&7Go back to the main Menu.'
+    Message: ''
+    InventoryLocation: 50
+    ExtraPermission: ''
+  Next:
+    RewardType: page
+    Reward: next
+    PriceType: nothing
+    MenuItem:
+    - type:ARROW
+    - amount:1
+    - name:&f&lNext
+    - 'lore:&7Open the next page.'
+    Message: ''
+    InventoryLocation: 54
+    ExtraPermission: ''
+    Condition:
+    - type:page
+    - under:%maxpage%
