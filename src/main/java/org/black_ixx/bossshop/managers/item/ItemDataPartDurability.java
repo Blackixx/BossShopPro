@@ -6,6 +6,7 @@ import org.black_ixx.bossshop.managers.misc.InputReader;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.List;
 
@@ -27,6 +28,8 @@ public class ItemDataPartDurability extends ItemDataPart {
         }
         Damageable d = (Damageable) item.getItemMeta();
         d.setDamage(damage);
+
+        item.setItemMeta((ItemMeta) d);
 		
 		/*//TEMPORARY FIX USE SILKSPAWNERS INSTEAD!
 		if(item.getType() == Material.MONSTER_EGG){

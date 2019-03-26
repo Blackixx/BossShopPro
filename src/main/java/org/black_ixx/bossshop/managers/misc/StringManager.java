@@ -102,6 +102,7 @@ public class StringManager {
         if (target != null && s.contains("%")) {
             s = s.replace("%name%", target.getName()).replace("%player%", target.getName()).replace("%target%", target.getName());
             s = s.replace("%displayname%", target.getDisplayName());
+            s = s.replace("%uuid%", target.getUniqueId().toString());
 
             if (s.contains("%balance%") && ClassManager.manager.getVaultHandler() != null) {
                 if (ClassManager.manager.getVaultHandler().getEconomy() != null) {
@@ -153,7 +154,7 @@ public class StringManager {
                 b = true;
             }
 
-            if (s.contains("%name%") || s.contains("%player%")) {
+            if (s.contains("%name%") || s.contains("%player%") || s.contains("%uuid%")) {
                 b = true;
             }
 
