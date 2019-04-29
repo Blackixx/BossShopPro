@@ -8,7 +8,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.Inventory;
 
-public class BSDisplayItemEvent extends Event implements Cancellable {
+public class BSDisplayItemEvent extends BSEvent implements Cancellable {
 
     private static final HandlerList handlers = new HandlerList();
 

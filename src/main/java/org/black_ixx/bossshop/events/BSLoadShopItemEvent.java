@@ -8,7 +8,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 
-public class BSLoadShopItemEvent extends Event {
+public class BSLoadShopItemEvent extends BSEvent {
 
     private static final HandlerList handlers = new HandlerList();
 

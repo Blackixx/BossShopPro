@@ -8,7 +8,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.inventory.ClickType;
 
-public class BSPlayerPurchaseEvent extends Event implements Cancellable {
+public class BSPlayerPurchaseEvent extends BSEvent implements Cancellable {
 
     private static final HandlerList handlers = new HandlerList();
 

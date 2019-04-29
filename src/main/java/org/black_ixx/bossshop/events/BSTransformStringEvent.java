@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class BSTransformStringEvent extends Event {
+public class BSTransformStringEvent extends BSEvent {
 
     private static final HandlerList handlers = new HandlerList();
 

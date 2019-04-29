@@ -205,7 +205,7 @@ public abstract class BSShop {
         }
         holder.setPage(page);
         holder.setHighestPage(highest_page);
-        if (ClassManager.manager.getStringManager().checkStringForFeatures(this, null, null, getDisplayName()) & !getValidDisplayName(p, holder).equals(i.getTitle()) & !auto_refresh) { //Title is customizable as well but shall only be updated through main thread to prevent errors
+        if (ClassManager.manager.getStringManager().checkStringForFeatures(this, null, null, getDisplayName()) & !getValidDisplayName(p, holder).equals(p.getOpenInventory().getTitle()) & !auto_refresh) { //Title is customizable as well but shall only be updated through main thread to prevent errors
             Inventory created = manager.getShopCustomizer().createInventory(this, items, p, manager, page, highest_page, holder.getPreviousShopHolder());
             p.openInventory(created);
             return;
