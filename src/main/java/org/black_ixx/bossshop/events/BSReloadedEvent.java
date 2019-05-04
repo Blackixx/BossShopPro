@@ -4,7 +4,7 @@ import org.black_ixx.bossshop.BossShop;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class BSReloadedEvent extends Event {
+public class BSReloadedEvent extends BSEvent {
 
     private static final HandlerList handlers = new HandlerList();
 

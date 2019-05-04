@@ -22,7 +22,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.8.0</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
@@ -33,12 +33,8 @@
 	</build>
 	<repositories>
 		<repository>
-			<id>bukkit-repo</id>
-			<url>http://repo.bukkit.org/content/groups/public</url>
-		</repository>
-		<repository>
-        <id>spigot-repo</id>
-        <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        	<id>spigot-repo</id>
+        	<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
 		<repository>
 			<id>bungeecord-repo</id>
@@ -46,7 +42,7 @@
 		</repository>
 		<repository>
 			<id>vault-repo</id>
-			<url>http://nexus.theyeticave.net/content/repositories/pub_releases</url>
+			<url>http://nexus.hc.to/content/repositories/pub_releases</url>
 		</repository>
 		<repository>
 			<id>confuser-repo</id>
@@ -72,32 +68,24 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.spigotmc</groupId>
-			<artifactId>spigot-api</artifactId>
-			<version>1.13.1-R0.1-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>	
-			<groupId>org.bukkit</groupId>	
-			<artifactId>craftbukkit</artifactId>	
-			<version>1.11.2-R0.1-SNAPSHOT</version>	
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.1</version>
-			<scope>provided</scope>
+			<artifactId>spigot</artifactId>
+			<version>1.14-R0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-api</artifactId>
-			<version>1.8-SNAPSHOT</version>
-			<scope>provided</scope>
+			<version>1.14-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>net.milkbowl.vault</groupId>
 			<artifactId>Vault</artifactId>
-			<version>1.2.32</version>
+			<version>1.7.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>me.clip</groupId>
+			<artifactId>placeholderapi</artifactId>
+			<version>2.9.2</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -110,7 +98,8 @@
 			<groupId>org.black_ixx</groupId>
 			<artifactId>PlayerPoints</artifactId>
 			<version>2.1.3</version>
-			<scope>provided</scope>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/PlayerPoints.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.gamingmesh.jobs</groupId>
@@ -152,13 +141,6 @@
 			<artifactId>EnjinMinecraftPlugin</artifactId>
 			<version>3.0.10</version>
 			<systemPath>${basedir}/lib/EnjinMinecraftPlugin.jar</systemPath>
-			<scope>system</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.enjin</groupId>
-			<artifactId>EnjinMinecraftPlugin_v2</artifactId>
-			<version>2.7.8</version>
-			<systemPath>${basedir}/lib/EnjinMinecraftPlugin_v2.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
 		<dependency>
@@ -218,16 +200,11 @@
 			<scope>system</scope>
 		</dependency>
 		<dependency>
-			<groupId>me.clip</groupId>
-			<artifactId>placeholderapi</artifactId>
-			<version>2.0.8</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>com.meowj</groupId>
 			<artifactId>LangUtils</artifactId>
 			<version>1.6.1</version>
-			<scope>provided</scope>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/LangUtils.jar</systemPath>
 		</dependency>
 	</dependencies>
 </project>

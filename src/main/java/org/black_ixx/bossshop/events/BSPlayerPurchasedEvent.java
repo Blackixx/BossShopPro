@@ -7,7 +7,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.inventory.ClickType;
 
-public class BSPlayerPurchasedEvent extends Event {
+public class BSPlayerPurchasedEvent extends BSEvent {
 
     private static final HandlerList handlers = new HandlerList();
 

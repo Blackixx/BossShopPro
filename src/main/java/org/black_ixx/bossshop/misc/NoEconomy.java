@@ -1,12 +1,12 @@
 package org.black_ixx.bossshop.misc;
 
-import net.milkbowl.vault.economy.Economy;
+import net.milkbowl.vault.economy.AbstractEconomy;
 import net.milkbowl.vault.economy.EconomyResponse;
 import org.black_ixx.bossshop.managers.ClassManager;
 
 import java.util.List;
 
-public class NoEconomy implements Economy {
+public class NoEconomy extends AbstractEconomy {
 
     @Override
     public EconomyResponse bankBalance(String arg0) {
