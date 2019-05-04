@@ -36,12 +36,7 @@ public class PointsManager {
                 break;
 
             case ENJIN_MINECRAFT_PLUGIN:
-                Plugin enjinplugin = Bukkit.getPluginManager().getPlugin("EnjinMinecraftPlugin");
-                if (enjinplugin.getDescription().getVersion().startsWith("2")) {
-                    this.pa = new BSPointsPluginEnjin_v2();
-                } else {
-                    this.pa = new BSPointsPluginEnjin();
-                }
+                this.pa = new BSPointsPluginEnjin();
                 break;
 
             case PLAYERPOINTS:

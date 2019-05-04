@@ -5,7 +5,7 @@ import org.black_ixx.bossshop.core.BSShop;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class BSCheckStringForFeaturesEvent extends Event {
+public class BSCheckStringForFeaturesEvent extends BSEvent {
 
     private static final HandlerList handlers = new HandlerList();
 

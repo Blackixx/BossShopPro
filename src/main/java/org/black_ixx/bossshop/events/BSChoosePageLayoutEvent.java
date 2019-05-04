@@ -7,7 +7,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 
-public class BSChoosePageLayoutEvent extends Event {
+public class BSChoosePageLayoutEvent extends BSEvent {
 
     private static final HandlerList handlers = new HandlerList();
 

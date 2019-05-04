@@ -10,7 +10,7 @@ public class AutoRefreshHandler {
     private int id = -1;
 
     public void start(int speed, BossShop plugin) {
-        BukkitTask t = new AutoRefreshRunnable(plugin).runTaskTimerAsynchronously(plugin, speed, speed);
+        BukkitTask t = new AutoRefreshRunnable(plugin).runTaskTimer(plugin, speed, speed);
         id = t.getTaskId();
     }
 
