@@ -1,6 +1,11 @@
 ﻿BossShopPro
 by Felix Neubauer
 
+v2.0.4 [BETA]
+*[NOTE] Still supports Spigot 1.13.*. If you use an older Spigot version than 1.13.*  use BossShopPro v1.9.8 or older.
+*[UPDATE] Updated to Spigot 1.14
+
+
 v2.0.3
 * [ADD] Added "%uuid%" placeholder
 * [FIX] Fixed durability ItemData
@@ -17,7 +22,7 @@ v2.0.1
 * [NOTE] Requires Java 8 or above
 * [UPDATE] Updated TokenManager support
 * [FIX] The "shop read" command now uses 1.13 enchantment names
-* [FIX] Now using 1.13 ItemMeta durability/damagee
+* [FIX] Now using 1.13 ItemMeta durability/damage
 
 
 v2.0.0 [BETA] For 1.13 and above. If you use an older Spigot build, download BossShopPro v1.9.8 instead.
