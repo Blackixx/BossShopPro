@@ -2,9 +2,7 @@ package org.black_ixx.bossshop.managers.item;
 
 import org.black_ixx.bossshop.core.BSBuy;
 import org.black_ixx.bossshop.managers.ClassManager;
-import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
-import org.bukkit.Material;
 import org.bukkit.block.banner.Pattern;
 import org.bukkit.block.banner.PatternType;
 import org.bukkit.entity.Player;
@@ -16,35 +14,27 @@ import java.util.List;
 
 public class ItemDataPartBanner extends ItemDataPart {
 
-    @SuppressWarnings("deprecation")
     @Override
     public ItemStack transform(ItemStack item, String used_name, String argument) {
-        if (Bukkit.getVersion().contains("1.8") || Bukkit.getVersion().contains("1.9")) {  //TODO: ADD Documentation and test this feature out
-            if (item.getType() != Material.LEGACY_BANNER) {
-                ClassManager.manager.getBugFinder().severe("Mistake in Config: '" + argument + "' is not a valid '" + used_name + "'.");
-                return item;
-            }
+        if(item.getItemMeta() instanceof BannerMeta){
             BannerMeta meta = (BannerMeta) item.getItemMeta();
-            String[] bdata = argument.split("\\+");
-            DyeColor basecolor = DyeColor.valueOf(bdata[0]);
-            if (basecolor != null) {
-                List<Pattern> patterns = new ArrayList<>();
-                for (int y = 1; y < bdata.length; y++) {
-                    try {
-                        String[] bpattern = bdata[y].split("-");
-                        DyeColor patterncolor = DyeColor.valueOf(bpattern[0]);
-                        PatternType patterntype = PatternType.getByIdentifier(bpattern[1]);
-                        Pattern pattern = new Pattern(patterncolor, patterntype);
-                        patterns.add(pattern);
-                    } catch (Exception e) {
-                    }
+            String[] bData = argument.split("\\+");
+            List<Pattern> patterns = new ArrayList<>();
+            for (String patternString : bData) {
+                try {
+                    String[] bPattern = patternString.split("-");
+                    DyeColor color = DyeColor.valueOf(bPattern[0]);
+                    PatternType patterntype = PatternType.getByIdentifier(bPattern[1]);
+                    Pattern pattern = new Pattern(color, patterntype);
+                    patterns.add(pattern);
+                } catch (Exception e) {
                 }
-                meta.setBaseColor(basecolor);
-                meta.setPatterns(patterns);
             }
+            meta.setPatterns(patterns);
             item.setItemMeta(meta);
             return item;
         }
+        ClassManager.manager.getBugFinder().severe("Mistake in Config: '" + argument + "' is not a valid '" + used_name + "'.");
         return item;
     }
 
@@ -60,13 +50,23 @@ public class ItemDataPartBanner extends ItemDataPart {
 
     @Override
     public String[] createNames() {
-        return new String[]{"banner"};
+        return new String[]{"banner", "patterns"};
     }
 
 
     @Override
     public List<String> read(ItemStack i, List<String> output) {
-        //TODO
+        if(i.getItemMeta() instanceof BannerMeta){
+             List<Pattern> patterns = ((BannerMeta)i.getItemMeta()).getPatterns();
+            if(!patterns.isEmpty()){
+                StringBuilder builder = new StringBuilder("banner:");
+                for (Pattern pattern : patterns) {
+                    builder.append(pattern.getColor().name() + "-" + pattern.getPattern().getIdentifier());
+                    builder.append("+");
+                }
+                output.add(builder.delete(builder.length() -1, builder.length()).toString());
+            }
+        }
         return output;
     }
 
