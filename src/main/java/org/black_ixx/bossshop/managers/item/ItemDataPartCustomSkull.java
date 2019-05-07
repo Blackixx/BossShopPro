@@ -2,7 +2,6 @@ package org.black_ixx.bossshop.managers.item;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
-import org.apache.commons.codec.binary.Base64;
 import org.black_ixx.bossshop.core.BSBuy;
 import org.black_ixx.bossshop.managers.ClassManager;
 import org.bukkit.Material;
@@ -12,10 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.lang.reflect.Field;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class ItemDataPartCustomSkull extends ItemDataPart {
 
@@ -50,7 +46,7 @@ public class ItemDataPartCustomSkull extends ItemDataPart {
     }
 
     private static Property getPropertyURL(String url) {
-        byte[] encodedData = Base64.encodeBase64(String.format("{textures:{SKIN:{url:\"%s\"}}}", url).getBytes());
+        byte[] encodedData = Base64.getEncoder().encode(String.format("{textures:{SKIN:{url:\"%s\"}}}", url).getBytes());
         return new Property("textures", new String(encodedData));
     }
 
