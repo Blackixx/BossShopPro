@@ -62,10 +62,12 @@ public class ShopCustomizer {
         for (BSBuy buy : items) {
             if (buy != null) {
 
+                if(buy.getDisplayPermission() != null && !buy.getDisplayPermission().isEmpty() && !p.hasPermission(buy.getDisplayPermission())){
+                    continue;
+                }
                 if (!showItem(shop, holder, buy, p, inventory, everything)) {
                     continue;
                 }
-
                 int slot = getSlot(inventory, everything, buy);
                 everything.put(slot, buy);
             }

@@ -17,8 +17,8 @@ public class BSBuyAdvanced extends BSBuy {
     private Map<ClickType, ActionSet> actions;
 
 
-    public BSBuyAdvanced(BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, String name, BSCondition condition, BSInputType inputtype, String inputmessage, Map<ClickType, ActionSet> actions) {
-        super(rewardT, priceT, reward, price, msg, location, permission, name, condition, inputtype, inputmessage);
+    public BSBuyAdvanced(BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, String displayPermission, String name, BSCondition condition, BSInputType inputtype, String inputmessage, Map<ClickType, ActionSet> actions) {
+        super(rewardT, priceT, reward, price, msg, location, permission, displayPermission, name, condition, inputtype, inputmessage);
         this.actions = actions;
     }
 

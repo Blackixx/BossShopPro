@@ -101,7 +101,7 @@ public class ShopItemCreationListener implements Listener {
         }
 
 
-        BSBuyAdvanced buy = new BSBuyAdvanced(event.getRewardType(), event.getPriceType(), event.getReward(), event.getPrice(), event.getMessage(), event.getInventoryLocation(), event.getExtraPermission(), event.getShopItemName(), event.getCondition(), event.getInputType(), event.getInputText(), map);
+        BSBuyAdvanced buy = new BSBuyAdvanced(event.getRewardType(), event.getPriceType(), event.getReward(), event.getPrice(), event.getMessage(), event.getInventoryLocation(), event.getExtraPermission(), event.getDisplayPermission(), event.getShopItemName(), event.getCondition(), event.getInputType(), event.getInputText(), map);
         event.useCustomShopItem(buy);
 
     }

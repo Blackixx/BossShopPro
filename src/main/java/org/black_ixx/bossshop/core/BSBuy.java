@@ -40,21 +40,22 @@ public class BSBuy {
     private Object price;
     private BSCondition condition;
     private String permission;
+    private String displayPermission;
     private boolean perm_is_group = false;
     private String msg;
     private int location;
 
-    public BSBuy(BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, String name, BSCondition condition, BSInputType inputtype, String inputtext) {
-        this(rewardT, priceT, reward, price, msg, location, permission, name);
+    public BSBuy(BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, String displayPermission, String name, BSCondition condition, BSInputType inputtype, String inputtext) {
+        this(rewardT, priceT, reward, price, msg, location, displayPermission, permission, name);
         this.condition = condition;
         this.inputtype = inputtype;
         this.inputtext = ClassManager.manager.getStringManager().transform(inputtext, this, null, null, null);
     }
-    public BSBuy(BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, String name) {
+    public BSBuy(BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, String displayPermission, String name) {
         this.priceT = priceT;
         this.rewardT = rewardT;
 
-        if (permission != null && permission != "") {
+        if (permission != null && permission.isEmpty()) {
             this.permission = permission;
             if (permission.startsWith("[") && permission.endsWith("]")) {
                 if (permission.length() > 2) {
@@ -563,4 +564,11 @@ public class BSBuy {
 
     }
 
+    public String getDisplayPermission() {
+        return displayPermission;
+    }
+
+    public void setDisplayPermission(String displayPermission) {
+        this.displayPermission = displayPermission;
+    }
 }

@@ -277,10 +277,8 @@ public abstract class BSShop {
 
         if (remember_current_shop) {
             InventoryView openinventory = p.getOpenInventory();
-            if (openinventory != null) {
-                if (openinventory.getTopInventory().getHolder() instanceof BSShopHolder) {
-                    oldshopholder = (BSShopHolder) openinventory.getTopInventory().getHolder();
-                }
+            if (openinventory.getTopInventory().getHolder() instanceof BSShopHolder) {
+                oldshopholder = (BSShopHolder) openinventory.getTopInventory().getHolder();
             }
         }
 

@@ -62,9 +62,7 @@ public class BuyItemHandler {
             String rewardType = c.getString("RewardType");
             String message = c.getString("Message");
             String permission = c.getString("ExtraPermission");
-            if (permission == null || permission == "") {
-                permission = null;
-            }
+            String displayPermission = c.getString("DisplayPermission");
             int inventoryLocation = c.getInt("InventoryLocation");
 
             if (inventoryLocation < 0) {
@@ -136,7 +134,7 @@ public class BuyItemHandler {
             BSConditionSet conditionsset = null;
 
             List<String> conditions = c.getStringList("Condition");
-            if (conditions != null) {
+            if (!conditions.isEmpty()) {
                 BSConditionSet set = new BSConditionSet();
                 BSConditionType type = null;
                 for (String s : conditions) {
@@ -164,18 +162,19 @@ public class BuyItemHandler {
                 }
             }
 
-            BSCreateShopItemEvent event = new BSCreateShopItemEvent(shop, name, c, rewardT, priceT, reward, price, message, inventoryLocation, permission, conditionsset, inputtype, inputtext);
+            BSCreateShopItemEvent event = new BSCreateShopItemEvent(shop, name, c, rewardT, priceT, reward, price, message, inventoryLocation, permission, displayPermission, conditionsset, inputtype, inputtext);
             Bukkit.getPluginManager().callEvent(event); //Allow addons to create a custom BSBuy
 
             BSBuy buy = event.getCustomShopItem();
             if (buy == null) { //If addons did not create own item create a default one here!
-                buy = new BSBuy(rewardT, priceT, reward, price, message, inventoryLocation, permission, name, conditionsset, inputtype, inputtext);
+                buy = new BSBuy(rewardT, priceT, reward, price, message, inventoryLocation, permission, displayPermission, name, conditionsset, inputtype, inputtext);
             }
+            buy.setDisplayPermission(displayPermission);
             buy.setShop(shop);
 
 
             stage = "MenuItem creation";
-            if (c.getStringList("MenuItem") == null) {
+            if (c.getStringList("MenuItem").isEmpty()) {
                 ClassManager.manager.getBugFinder().severe("Error when trying to create shopitem " + name + "! MenuItem is not existing?! [Shop: " + shopname + "]");
                 return null;
             }

@@ -8,7 +8,6 @@ import org.black_ixx.bossshop.core.conditions.BSCondition;
 import org.black_ixx.bossshop.core.prices.BSPriceType;
 import org.black_ixx.bossshop.core.rewards.BSRewardType;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 
@@ -23,7 +22,7 @@ public class BSCreateShopItemEvent extends BSEvent {
     private final BSRewardType rewardT;
     private final BSPriceType priceT;
     private final Object reward, price;
-    private final String msg, permission;
+    private final String msg, permission, displayPermission;
     private final int inventorylocation;
     private final BSCondition condition;
     private final BSInputType inputtype;
@@ -31,7 +30,7 @@ public class BSCreateShopItemEvent extends BSEvent {
     private BSBuy custom_shopitem;
 
 
-    public BSCreateShopItemEvent(BSShop shop, String name, ConfigurationSection section, BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, BSCondition condition, BSInputType inputtype, String inputtext) {
+    public BSCreateShopItemEvent(BSShop shop, String name, ConfigurationSection section, BSRewardType rewardT, BSPriceType priceT, Object reward, Object price, String msg, int location, String permission, String displayPermission, BSCondition condition, BSInputType inputtype, String inputtext) {
         this.shop = shop;
         this.name = name;
         this.section = section;
@@ -42,6 +41,7 @@ public class BSCreateShopItemEvent extends BSEvent {
         this.msg = msg;
         this.inventorylocation = location;
         this.permission = permission;
+        this.displayPermission = displayPermission;
         this.condition = condition;
         this.inputtype = inputtype;
         this.inputtext = inputtext;
@@ -109,6 +109,10 @@ public class BSCreateShopItemEvent extends BSEvent {
 
     public BSBuy getCustomShopItem() {
         return custom_shopitem;
+    }
+
+    public String getDisplayPermission() {
+        return displayPermission;
     }
 
     @Override
