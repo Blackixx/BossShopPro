@@ -64,7 +64,7 @@ public class BSConfigShop extends BSShop {
             lore.add(ChatColor.YELLOW + "For more information check /plugins/" + BossShop.NAME + "/BugFinder.yml out!");
             m.setLore(lore);
             i.setItemMeta(m);
-            addShopItem(new BSBuy(BSRewardType.Command, BSPriceType.Nothing, "tell %player% the config file (" + ymlName + ") contains mistakes...", null, "", 0, "", name), i, ClassManager.manager);
+            addShopItem(new BSBuy(BSRewardType.Command, BSPriceType.Nothing, "tell %player% the config file (" + ymlName + ") contains mistakes...", null, "", 0, "", "", name), i, ClassManager.manager);
             finishedAddingItems();
             return;
         }

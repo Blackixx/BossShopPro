@@ -141,22 +141,22 @@ public class BossShopAPI {
 
 
     //Create things
-    public BSBuy createBSBuy(String name, BSRewardType reward_type, BSPriceType price_type, Object reward, Object price, String msg, int location, String permission) {
-        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission, name);
+    public BSBuy createBSBuy(String name, BSRewardType reward_type, BSPriceType price_type, Object reward, Object price, String msg, int location, String permission, String displayPermission) {
+        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission, displayPermission, name);
     }
 
 
-    public BSBuy createBSBuyCustom(String name, BSRewardType reward_type, BSPriceType price_type, BSCustomLink reward, Object price, String msg, int location, String permission) {
-        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission, name);
+    public BSBuy createBSBuyCustom(String name, BSRewardType reward_type, BSPriceType price_type, BSCustomLink reward, Object price, String msg, int location, String permission, String displayPermission) {
+        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission,displayPermission, name);
     }
 
-    public BSBuy createBSBuy(BSRewardType reward_type, BSPriceType price_type, Object reward, Object price, String msg, int location, String permission) {
-        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission, "");
+    public BSBuy createBSBuy(BSRewardType reward_type, BSPriceType price_type, Object reward, Object price, String msg, int location, String permission, String displayPermission) {
+        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission, displayPermission,  "");
     }
 
 
-    public BSBuy createBSBuyCustom(BSRewardType reward_type, BSPriceType price_type, BSCustomLink reward, Object price, String msg, int location, String permission) {
-        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission, "");
+    public BSBuy createBSBuyCustom(BSRewardType reward_type, BSPriceType price_type, BSCustomLink reward, Object price, String msg, int location, String permission, String displayPermission) {
+        return new BSBuy(reward_type, price_type, reward, price, msg, location, permission, displayPermission, "");
     }
 
     public BSCustomLink createBSCustomLink(BSCustomActions actions, int action_id) {
