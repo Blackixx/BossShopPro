@@ -97,7 +97,7 @@ public class SignListener implements Listener {
             if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
 
                 Block b = e.getClickedBlock();
-                if (b.getType().data == Sign.class) {
+                if (b.getType().name().contains("SIGN")) {
 
                     if (b.getState() instanceof Sign) {
                         Sign s = (Sign) b.getState();

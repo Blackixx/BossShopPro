@@ -1,8 +1,7 @@
 package org.black_ixx.bossshop.managers.external.spawners;
 
 
-import com.songoda.epicspawners.api.EpicSpawners;
-import com.songoda.epicspawners.api.EpicSpawnersAPI;
+import com.songoda.epicspawners.EpicSpawners;
 import org.bukkit.inventory.ItemStack;
 
 
@@ -12,15 +11,15 @@ public class SpawnersHandlerEpicSpawners implements ISpawnerHandler {
 
 
     public SpawnersHandlerEpicSpawners() {
-        util = EpicSpawnersAPI.getImplementation();
+        util = EpicSpawners.getInstance();
     }
 
     public ItemStack transformSpawner(ItemStack i, String entityType) {
-        return util.newSpawnerItem(util.createSpawnerData(entityType).build(), 1);
+        return util.getSpawnerManager().getSpawnerData(entityType).toItemStack();
     }
 
     public String readSpawner(ItemStack i) {
-        return util.getSpawnerDataFromItem(i).getIdentifyingName();
+        return util.getSpawnerManager().getSpawnerData(i).getIdentifyingName();
     }
 
 }
