@@ -18,6 +18,10 @@ public class ShopProperty extends SettingsProperty {
     }
 
 
+    /**
+     * Load a section from the config
+     * @param config the config to load from
+     */
     @Override
     public void load(ConfigurationSection config) {
         super.load(config);
@@ -26,12 +30,20 @@ public class ShopProperty extends SettingsProperty {
         }
     }
 
+    /**
+     * Read in the shops
+     * @param type the class type
+     */
     public void readShops(Class<?> type) {
         for (BSShop shop : ClassManager.manager.getShops().getShops().values()) {
             readShop(shop, type);
         }
     }
 
+    /**
+     * Update the shops
+     * @param o shop
+     */
     @Override
     public void update(Object o) {
         if (o instanceof BSShop) {
@@ -41,6 +53,11 @@ public class ShopProperty extends SettingsProperty {
         super.update(o);
     }
 
+    /**
+     * Read in the shops from the config
+     * @param shop the shop to read
+     * @param type the type
+     */
     public void readShop(BSShop shop, Class<?> type) {
         if (shop instanceof BSConfigShop) {
             BSConfigShop configshop = (BSConfigShop) shop;
@@ -55,6 +72,12 @@ public class ShopProperty extends SettingsProperty {
     }
 
 
+    /**
+     * Check if a shop contains something
+     * @param input where to check it
+     * @param value what to check
+     * @return contains or not
+     */
     public boolean containsValue(Object input, Object value) {
         if (input instanceof BSShop) {
             BSShop shop = (BSShop) input;
@@ -65,6 +88,12 @@ public class ShopProperty extends SettingsProperty {
         return super.containsValue(input, value);
     }
 
+    /**
+     * Check if a setting is contained in a shop
+     * @param shop the shop to check
+     * @param value the value to check
+     * @return contained or not
+     */
     public boolean containsValueShop(BSShop shop, Object value) {
         if (shop_settings != null && shop_settings.containsKey(shop)) {
             if (isIdentical(shop_settings.get(shop), value)) {
@@ -74,6 +103,11 @@ public class ShopProperty extends SettingsProperty {
         return false;
     }
 
+    /**
+     * Check if a shop contains any value
+     * @param value the value to check
+     * @return contained or not
+     */
     @Override
     public boolean containsValueAny(Object value) {
         if (shop_settings != null) {
@@ -87,6 +121,11 @@ public class ShopProperty extends SettingsProperty {
     }
 
 
+    /**
+     * Get an object from a shop
+     * @param input the shop to check
+     * @return object
+     */
     public Object getObject(Object input) {
         if (input instanceof BSShop) {
             BSShop shop = (BSShop) input;
