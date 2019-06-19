@@ -17,15 +17,27 @@ public abstract class BSAnvilHolder implements InventoryHolder {
     }
 
 
+    /**
+     * Get the inventory
+     * @return inventory
+     */
     @Override
     public Inventory getInventory() {
         return inventory;
     }
 
+    /**
+     * Set the inventory
+     * @param i inventory
+     */
     public void setInventory(Inventory i) {
         this.inventory = i;
     }
 
+    /**
+     * Get the output text from the inventory
+     * @return output text
+     */
     public String getOutputText() {
         if (inventory != null) {
             ItemStack item = inventory.getItem(2);
@@ -39,6 +51,10 @@ public abstract class BSAnvilHolder implements InventoryHolder {
     }
 
 
+    /**
+     * Check if player clicked result
+     * @param p player to check
+     */
     public abstract void userClickedResult(Player p);
 
 

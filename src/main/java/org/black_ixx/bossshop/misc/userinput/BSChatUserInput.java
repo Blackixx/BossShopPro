@@ -23,14 +23,28 @@ public class BSChatUserInput {
     }
 
 
+    /**
+     * Check if time is up to date
+     * @return up to date
+     */
     public boolean isUpToDate() {
         return time > System.currentTimeMillis();
     }
 
+    /**
+     * Check if it's the correct player being checked
+     * @param p player to check
+     * @return correct or not
+     */
     public boolean isCorrectPlayer(Player p) {
         return p.getUniqueId().equals(uuid);
     }
 
+    /**
+     * Input received
+     * @param p the player to check
+     * @param text string
+     */
     public void input(Player p, String text) {
         input.receivedInput(p, text);
         if (ClassManager.manager.getSettings().getBungeeCordServerEnabled()) {

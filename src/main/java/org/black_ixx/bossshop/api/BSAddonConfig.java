@@ -31,6 +31,10 @@ public class BSAddonConfig implements BSAddonStorage {
         config = YamlConfiguration.loadConfiguration(file);
     }
 
+    /**
+     * Save the addon config
+     * @return saved or not
+     */
     public boolean save() {
         if (isSaving)
             return false;
@@ -49,6 +53,9 @@ public class BSAddonConfig implements BSAddonStorage {
         return true;
     }
 
+    /**
+     * Save the addon config async
+     */
     public void saveAsync() {
         plugin.getServer().getScheduler().runTaskAsynchronously(plugin, new Runnable() {
 
@@ -60,6 +67,10 @@ public class BSAddonConfig implements BSAddonStorage {
         });
     }
 
+    /**
+     * Reload the addon config
+     * @return reloaded or not
+     */
     public boolean reload() {
         try {
             config = YamlConfiguration.loadConfiguration(file);
@@ -70,57 +81,114 @@ public class BSAddonConfig implements BSAddonStorage {
         return false;
     }
 
+    /**
+     * Get the addon config
+     * @return addon config
+     */
     public FileConfiguration getConfig() {
         return config;
     }
 
+    /**
+     * Get the config file
+     * @return file
+     */
     public File getFile() {
         return file;
     }
 
 
+    /**
+     * Set a path for the config
+     * @param path path
+     * @param value value
+     */
     @Override
     public void set(String path, Object value) {
         config.set(path, value);
     }
 
+    /**
+     * Get a string from the config
+     * @param path path
+     * @param def default
+     * @return string
+     */
     @Override
     public String getString(String path, String def) {
         return config.getString(path, def);
     }
 
+    /**
+     * Get an int from the config
+     * @param path path
+     * @param def default
+     * @return int
+     */
     @Override
     public int getInt(String path, int def) {
         return config.getInt(path, def);
     }
 
+    /**
+     * Get a double from the config
+     * @param path path
+     * @param def default
+     * @return double
+     */
     @Override
     public double getDouble(String path, double def) {
         return config.getDouble(path, def);
     }
 
+    /**
+     * Get a boolean from the config
+     * @param path path
+     * @param def default
+     * @return boolean
+     */
     @Override
     public boolean getBoolean(String path, boolean def) {
         return config.getBoolean(path, def);
     }
 
+    /**
+     * Get a string list from the config
+     * @param path path
+     * @return string list
+     */
     @Override
     public List<String> getStringList(String path) {
         return config.getStringList(path);
     }
 
-
+    /**
+     * Add a default path to the config
+     * @param path path
+     * @param value value
+     */
     public void addDefault(String path, Object value) {
         if (!config.contains(path)) {
             config.set(path, value);
         }
     }
 
+    /**
+     * Check if a config contains a path
+     * @param key path
+     * @return contains or not
+     */
     @Override
     public boolean containsPath(String key) {
         return config.contains(key);
     }
 
+    /**
+     * List all keys in a section of a config
+     * @param section the section to check
+     * @param deep subkeys or not
+     * @return list of keys
+     */
     @Override
     public Set<String> listKeys(String section, boolean deep) {
         ConfigurationSection s = config;
@@ -133,6 +201,10 @@ public class BSAddonConfig implements BSAddonStorage {
         return null;
     }
 
+    /**
+     * Delete all parts of a section
+     * @param section section to delete
+     */
     @Override
     public void deleteAll(String section) {
         ConfigurationSection s = config;
@@ -147,6 +219,11 @@ public class BSAddonConfig implements BSAddonStorage {
         }
     }
 
+    /**
+     * Copy a file to a new file
+     * @param source the source
+     * @return new file
+     */
     @Override
     public boolean pasteContentFrom(BSAddonStorage source) {
         if (source instanceof BSAddonConfig) {

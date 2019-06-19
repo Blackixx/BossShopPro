@@ -19,6 +19,10 @@ public class ShopItemProperty extends ShopProperty {
     }
 
 
+    /**
+     * Load in a shop item property
+     * @param config the config to load from
+     */
     @Override
     public void load(ConfigurationSection config) {
         super.load(config);
@@ -40,6 +44,10 @@ public class ShopItemProperty extends ShopProperty {
         }
     }
 
+    /**
+     * Update a shop item property
+     * @param o shop
+     */
     @Override
     public void update(Object o) {
         if (o instanceof BSBuy) {
@@ -49,6 +57,11 @@ public class ShopItemProperty extends ShopProperty {
         super.update(o);
     }
 
+    /**
+     * Read in a shop item
+     * @param buy the item
+     * @param type the type
+     */
     public void readShopItem(BSBuy buy, Class<?> type) {
         if (buy.getShop() instanceof BSConfigShop) {
             BSConfigShop configshop = (BSConfigShop) buy.getShop();
@@ -56,6 +69,12 @@ public class ShopItemProperty extends ShopProperty {
         }
     }
 
+    /**
+     * REad in a shop item
+     * @param buy the item
+     * @param configshop the shop to read from
+     * @param type the type
+     */
     public void readShopItem(BSBuy buy, BSConfigShop configshop, Class<?> type) {
         ConfigurationSection section = buy.getConfigurationSection(configshop);
         if (section != null && section.contains(path)) {
@@ -66,6 +85,11 @@ public class ShopItemProperty extends ShopProperty {
         }
     }
 
+    /**
+     * Read a shop
+     * @param shop the shop to read
+     * @param type the type
+     */
     @Override
     public void readShop(BSShop shop, Class<?> type) {
         super.readShop(shop, type);
@@ -75,6 +99,12 @@ public class ShopItemProperty extends ShopProperty {
     }
 
 
+    /**
+     * Check if an object contains a value
+     * @param input where to check it
+     * @param value what to check
+     * @return
+     */
     public boolean containsValue(Object input, Object value) {
         if (input instanceof BSBuy) {
             BSBuy buy = (BSBuy) input;
@@ -87,6 +117,12 @@ public class ShopItemProperty extends ShopProperty {
         return super.containsValue(input, value);
     }
 
+    /**
+     * Check if a shop item contains a value
+     * @param buy
+     * @param value
+     * @return contains or not
+     */
     public boolean containsValueShopItem(BSBuy buy, Object value) {
         if (shopitem_settings != null && shopitem_settings.containsKey(buy)) {
             if (isIdentical(shopitem_settings.get(buy), value)) {
@@ -96,6 +132,11 @@ public class ShopItemProperty extends ShopProperty {
         return false;
     }
 
+    /**
+     * Check if a shop item contains any value
+     * @param value the value to check
+     * @return contains or not
+     */
     @Override
     public boolean containsValueAny(Object value) {
         if (shopitem_settings != null) {
@@ -109,6 +150,11 @@ public class ShopItemProperty extends ShopProperty {
     }
 
 
+    /**
+     * Get the shop item object
+     * @param input the shop to check
+     * @return item
+     */
     @Override
     public Object getObject(Object input) {
         if (input instanceof BSBuy) {

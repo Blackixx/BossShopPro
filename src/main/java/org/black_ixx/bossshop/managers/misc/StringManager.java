@@ -20,6 +20,11 @@ import org.bukkit.inventory.ItemStack;
 
 public class StringManager {
 
+    /**
+     * Transform specific strings from one thing to another
+     * @param s input string
+     * @return transformed string
+     */
     public String transform(String s) {
         if (s == null) {
             return null;

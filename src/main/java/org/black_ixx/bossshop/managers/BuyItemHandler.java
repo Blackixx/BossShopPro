@@ -21,6 +21,13 @@ import java.util.List;
 public class BuyItemHandler {
 
 
+    /**
+     * Load an item from a config into a shop
+     * @param items_section the config section for the item
+     * @param shop the shop to load it into
+     * @param name the name of the config
+     * @return shop item
+     */
     public BSBuy loadItem(ConfigurationSection items_section, BSShop shop, String name) {
         if (items_section.getConfigurationSection(name) == null) {
             String shopname = shop == null ? "none" : shop.getShopName();
@@ -53,6 +60,13 @@ public class BuyItemHandler {
         return buy;
     }
 
+    /**
+     * Create item to buy
+     * @param shop name of shop to load from
+     * @param name name of item
+     * @param c part of config to get from
+     * @return shop item
+     */
     public BSBuy createBuyItem(BSShop shop, String name, ConfigurationSection c) {
         String stage = "Basic Data";
         String shopname = shop == null ? "none" : shop.getShopName();

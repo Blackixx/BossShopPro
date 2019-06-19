@@ -11,6 +11,11 @@ public class TimeTools {
     public final static int DAY = HOUR * 24;
     public final static int WEEK = DAY * 7;
 
+    /**
+     * Transform a long into time
+     * @param time_in_seconds the time to transform
+     * @return transformed string
+     */
     public static String transform(long time_in_seconds) {
         if (time_in_seconds > WEEK) {
             return ClassManager.manager.getMessageHandler().get("Time.Weeks").replace("%time%", String.valueOf(time_in_seconds / WEEK));

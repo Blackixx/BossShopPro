@@ -12,7 +12,11 @@ import java.util.Map;
 
 public class Misc {
 
-
+    /**
+     * Fix the lore from a stringlist
+     * @param itemData the sting list
+     * @return fixed lore list
+     */
     public static List<String> fixLore(List<String> itemData) {
         Map<Integer, String> lore = null;
         List<String> new_list = null;
@@ -66,6 +70,11 @@ public class Misc {
     }
 
 
+    /**
+     * Play a sound for a player
+     * @param p the player to play the sound for
+     * @param sound the sound to play
+     */
     public static void playSound(Player p, String sound) {
         if (sound != null) {
             if (!sound.isEmpty()) {
@@ -93,6 +102,11 @@ public class Misc {
     }
 
 
+    /**
+     * Get the item in the player's main hand
+     * @param p player to get item from
+     * @return item
+     */
     @SuppressWarnings("deprecation")
     public static ItemStack getItemInMainHand(Player p) {
         ItemStack item = null;

@@ -61,14 +61,24 @@ public abstract class BossShopAddon extends JavaPlugin {
     }
 
 
+    /**
+     * Called to enable the addon
+     */
     protected void enable() { //Can be overwritten
         enableAddon();
     }
 
+    /**
+     * Called to disable the addon
+     */
     protected void disable() { //Can be overwritten
         disableAddon();
     }
 
+    /**
+     * Called to reload the addon
+     * @param sender the execute of the command
+     */
     public void reload(CommandSender sender) { //Can be overwritten
         bossShopReloaded(sender);
         sender.sendMessage(ChatColor.YELLOW + "Reloaded " + BossShop.NAME + " Addon " + ChatColor.GOLD + getAddonName());
@@ -76,23 +86,40 @@ public abstract class BossShopAddon extends JavaPlugin {
 
     /////// //// //// //// //// ////
 
+    /**
+     * Prints a serve statement in the logger
+     * @param msg the message to log
+     */
     public void printSevere(String msg) {
         Bukkit.getLogger().severe("[" + getAddonName() + "] " + msg);
     }
 
+    /**
+     * Prints a warning in the warning logger
+     * @param msg the message to log
+     */
     public void printWarning(String msg) {
         Bukkit.getLogger().warning("[" + getAddonName() + "] " + msg);
     }
 
+    /**
+     * Prints information in the info logger
+     * @param msg message to log
+     */
     public void printInfo(String msg) {
         Bukkit.getLogger().info("[" + getAddonName() + "] " + msg);
     }
 
+    /**
+     * Get an instance of the BossShop class
+     * @return instance of class
+     */
     public final BossShop getBossShop() {
         return bs;
     }
 
     /////// //// //// //// //// ////
+
 
     protected double getWorth(String s) {
         try {
@@ -116,6 +143,12 @@ public abstract class BossShopAddon extends JavaPlugin {
         }
     }
 
+    /**
+     * Creates store for an addon
+     * @param plugin the plugin addon
+     * @param name the name of the addon
+     * @return new storage for an addon
+     */
     public BSAddonStorage createStorage(Plugin plugin, String name) {
         int type = BSAddonStorage.TYPE_LOCAL_FILE; //Maybe add an option to store data elsewhere in future
 
@@ -129,14 +162,28 @@ public abstract class BossShopAddon extends JavaPlugin {
 
     /////// //// //// //// //// ////
 
+    /**
+     * Get the name of the addon
+     * @return name of addon
+     */
     public abstract String getAddonName();
 
+    /**
+     * Get the version required for the addon to work
+     * @return version required
+     */
     public abstract String getRequiredBossShopVersion();
 
+    /**
+     * Enables the addon
+     */
     public abstract void enableAddon();
 
     public abstract void bossShopFinishedLoading();
 
+    /**
+     * Disables the addon
+     */
     public abstract void disableAddon();
 
     public abstract void bossShopReloaded(CommandSender sender);
