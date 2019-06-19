@@ -5,6 +5,14 @@ import java.util.List;
 public class StringManipulationLib {
 
 
+    /**
+     * Replace placeholders in a string
+     * @param s input string
+     * @param placeholder_name name of placeholder
+     * @param replacement  replacement string
+     * @param fromIndex index
+     * @return replaced string
+     */
     public static String replacePlaceholder(String s, String placeholder_name, String replacement, int fromIndex) {
         String complete = getCompleteVariable(s, placeholder_name, fromIndex);
         if (complete != null) {

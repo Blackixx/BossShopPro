@@ -18,6 +18,12 @@ import java.util.List;
 public class InputReader {
 
 
+    /**
+     * Get a string from an object
+     * @param o object to check
+     * @param lowercase lowercase or not
+     * @return string
+     */
     public static String readString(Object o, boolean lowercase) {
         if (o == null) {
             return null;
@@ -29,6 +35,11 @@ public class InputReader {
         return s;
     }
 
+    /**
+     * Get a string list from an object
+     * @param o object to check
+     * @return string list
+     */
     @SuppressWarnings("unchecked")
     public static List<String> readStringList(Object o) {
         if (o instanceof List<?>) {
@@ -42,6 +53,11 @@ public class InputReader {
         return null;
     }
 
+    /**
+     * Get a list of string list from an object
+     * @param o object to check
+     * @return list of string list
+     */
     @SuppressWarnings("unchecked")
     public static List<List<String>> readStringListList(Object o) {
         if (!(o instanceof List<?>)) {
@@ -60,6 +76,12 @@ public class InputReader {
         }
     }
 
+    /**
+     * Get list of itemstacks from object
+     * @param o object to check
+     * @param final_version final version or not
+     * @return list of itemstacks
+     */
     public static List<ItemStack> readItemList(Object o, boolean final_version) {
         List<List<String>> list = readStringListList(o);
         if (list != null) {
@@ -72,6 +94,12 @@ public class InputReader {
         return null;
     }
 
+    /**
+     * Get itemstack from object
+     * @param o object to check
+     * @param final_version final version or not
+     * @return itemstack
+     */
     public static ItemStack readItem(Object o, boolean final_version) {
         List<ItemStack> list = readItemList(o, final_version);
         if (list != null & !list.isEmpty()) {
@@ -80,6 +108,11 @@ public class InputReader {
         return null;
     }
 
+    /**
+     * Get enchant from an object
+     * @param o object to check
+     * @return enchant
+     */
     public static Enchant readEnchant(Object o) {
         String s = readString(o, false);
         if (s != null) {
@@ -120,6 +153,11 @@ public class InputReader {
     }
 
 
+    /**
+     * Get enchant by name
+     * @param name name of enchant
+     * @return enchant
+     */
     public static Enchantment readEnchantment(String name) {
         if (name != null) {
             return EnchantmentWrapper.getByKey(NamespacedKey.minecraft(name.toLowerCase()));
@@ -128,6 +166,12 @@ public class InputReader {
     }
 
 
+    /**
+     * Get boolean from string
+     * @param s string to get from
+     * @param def default value
+     * @return boolean
+     */
     public static boolean getBoolean(String s, boolean def) {
         if (s != null) {
             if (s.equalsIgnoreCase(Boolean.TRUE.toString()) || s.equalsIgnoreCase("yes")) {
@@ -140,6 +184,12 @@ public class InputReader {
         return def;
     }
 
+    /**
+     * Get a double from an object
+     * @param o objecct to get from
+     * @param exception exception
+     * @return double
+     */
     public static double getDouble(Object o, double exception) {
         if (o instanceof String) {
             String s = (String) o;
@@ -161,6 +211,12 @@ public class InputReader {
         return exception;
     }
 
+    /**
+     * Get an int from an object
+     * @param o object to get from
+     * @param exception exception
+     * @return int
+     */
     public static int getInt(Object o, int exception) {
         if (o instanceof String) {
             String s = (String) o;
@@ -180,6 +236,11 @@ public class InputReader {
         return exception;
     }
 
+    /**
+     * Get timed commands from an object
+     * @param o object to check
+     * @return timed commands
+     */
     public static HashMap<Integer, String> readTimedCommands(Object o) {
         List<String> list = readStringList(o);
         if (list != null) {
@@ -201,6 +262,11 @@ public class InputReader {
     }
 
 
+    /**
+     * Read material from string
+     * @param s string to check
+     * @return material
+     */
     public static Material readMaterial(String s) {
         Material m = Material.matchMaterial(s, false);
         if (m == null) {
@@ -209,6 +275,11 @@ public class InputReader {
         return m;
     }
 
+    /**
+     * Read entity type from string
+     * @param s string to check
+     * @return entity type
+     */
     public static EntityType readEntityType(String s) {
         for (EntityType e : EntityType.values()) {
             if (e.name().replace("_", "").equalsIgnoreCase(s.replace("_", ""))) {
