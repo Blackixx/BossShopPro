@@ -100,8 +100,7 @@
 			<groupId>org.black_ixx</groupId>
 			<artifactId>PlayerPoints</artifactId>
 			<version>2.1.4</version>
-			<systemPath>${basedir}/lib/PlayerPoints.jar</systemPath>
-			<scope>system</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds jobs support -->
