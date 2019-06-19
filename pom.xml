@@ -114,11 +114,10 @@
 
 		<!-- Adds voting plugin support -->
 		<dependency>
-			<groupId>com.Ben12345rocks.VotingPlugin.Main</groupId>
-			<artifactId>Main</artifactId>
-			<version>4.2.3</version>
-			<systemPath>${basedir}/lib/VotingPlugin.jar</systemPath>
-			<scope>system</scope>
+			<groupId>com.github.Ben12345rocks</groupId>
+			<artifactId>VotingPlugin</artifactId>
+			<version>5.19</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds command points support -->
