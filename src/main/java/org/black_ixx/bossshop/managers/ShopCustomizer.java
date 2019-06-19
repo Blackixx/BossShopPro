@@ -21,6 +21,17 @@ import java.util.Set;
 public class ShopCustomizer {
 
 
+    /**
+     * Create a new inventory
+     * @param shop the shop to create from
+     * @param items the items in the shop
+     * @param p the player opening the shop
+     * @param m the class manager
+     * @param page the page of the shop
+     * @param highest_page the highest page for the shop
+     * @param oldshopholder the holder of the shop
+     * @return inventory
+     */
     public Inventory createInventory(BSShop shop, Set<BSBuy> items, Player p, ClassManager m, int page, int highest_page, BSShopHolder oldshopholder) {
         BSShopHolder holder = new BSShopHolder(shop, oldshopholder);
         holder.setPage(page);
@@ -31,6 +42,17 @@ public class ShopCustomizer {
     }
 
 
+    /**
+     * Create a new inventory
+     * @param shop the shop to create from
+     * @param items the items for the inventory
+     * @param p the player opening
+     * @param m the class manager
+     * @param inventory the inventory being opened
+     * @param page the page of the shop
+     * @param highest_page the amount of pages for shop
+     * @return inventory
+     */
     public Inventory createInventory(BSShop shop, Set<BSBuy> items, Player p, ClassManager m, Inventory inventory, int page, int highest_page) {
         if (inventory.getHolder() instanceof BSShopHolder) {
             BSShopHolder holder = (BSShopHolder) inventory.getHolder();
@@ -40,6 +62,17 @@ public class ShopCustomizer {
         }
     }
 
+    /**
+     * Create a new inventory
+     * @param shop the shop to open as
+     * @param items the items in the shop
+     * @param p the player opening
+     * @param m the class manager
+     * @param inventory the inventory to open as
+     * @param holder the holder of the inventory
+     * @param page the page of the inventory
+     * @return inventory
+     */
     public Inventory createInventory(BSShop shop, Set<BSBuy> items, Player p, ClassManager m, Inventory inventory, BSShopHolder holder, int page) {
         holder.setPage(page);
         //Adding all possible items in a map
@@ -135,6 +168,17 @@ public class ShopCustomizer {
     }
 
 
+    /**
+     * Add an item to an inventory
+     * @param inventory the inventory to add to
+     * @param item the item to add
+     * @param slot the slot of the item
+     * @param displaying display the item or not
+     * @param p the player opening inventory
+     * @param buy shop item
+     * @param shop the shop added to
+     * @param holder the holder of the shop
+     */
     private void addItem(Inventory inventory, ItemStack item, int slot, boolean displaying, Player p, BSBuy buy, BSShop shop, BSShopHolder holder) {
         if (displaying && p != null) {
             if (item.hasItemMeta()) {
@@ -156,6 +200,16 @@ public class ShopCustomizer {
     }
 
 
+    /**
+     * Show the item in an inventory
+     * @param shop the shop to get from
+     * @param holder the holder of the shop
+     * @param buy the shop item
+     * @param p the player opening the shop
+     * @param inventory the invetory of the shop
+     * @param filled_locs the filled locations of the shop
+     * @return show or not
+     */
     public boolean showItem(BSShop shop, BSShopHolder holder, BSBuy buy, Player p, Inventory inventory, HashMap<Integer, BSBuy> filled_locs) {
         if (filled_locs.containsKey(buy.getInventoryLocation())) {
             if (filled_locs.get(buy.getInventoryLocation()) == buy) {
@@ -184,6 +238,13 @@ public class ShopCustomizer {
         return true;
     }
 
+    /**
+     * Get a slot position
+     * @param inventory the inventory of the shop
+     * @param everything all items loaded in the inventory
+     * @param buy the item being checked
+     * @return slot of item
+     */
     public int getSlot(Inventory inventory, HashMap<Integer, BSBuy> everything, BSBuy buy) {
         if (buy.getInventoryLocation() == -1) {
             return getFirstFreeSlot(inventory, everything);
@@ -191,6 +252,12 @@ public class ShopCustomizer {
         return buy.getInventoryLocation();
     }
 
+    /**
+     * Get the first free slot in an inventory
+     * @param inventory the inventory to check
+     * @param everything the items loaded in the inventory
+     * @return first free slot
+     */
     public int getFirstFreeSlot(Inventory inventory, HashMap<Integer, BSBuy> everything) {
         for (int i = 0; i < 5000; i++) {
             if (!everything.containsKey(i)) {

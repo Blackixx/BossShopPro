@@ -27,6 +27,10 @@ public class MessageHandler {
         config = YamlConfiguration.loadConfiguration(this.file);
     }
 
+    /**
+     * Get the config file
+     * @return config
+     */
     public FileConfiguration getConfig() {
         if (config == null)
             reloadConfig();
@@ -34,6 +38,9 @@ public class MessageHandler {
         return config;
     }
 
+    /**
+     * Reload the config file
+     */
     public void reloadConfig() {
         config = YamlConfiguration.loadConfiguration(file);
         InputStream defConfigStream = plugin.getResource(fileName);
@@ -43,6 +50,9 @@ public class MessageHandler {
         }
     }
 
+    /**
+     * Save the config
+     */
     public void saveConfig() {
         try {
             getConfig().save(file);
@@ -51,18 +61,45 @@ public class MessageHandler {
         }
     }
 
+    /**
+     * Send message from config to player
+     * @param node path of message
+     * @param sender sender to send to
+     */
     public void sendMessage(String node, CommandSender sender) {
         sendMessage(node, sender, null, null, null, null, null);
     }
 
+    /**
+     * Send message from config to player
+     * @param node path of message
+     * @param sender sender to send to
+     * @param offline_target offline target
+     */
     public void sendMessage(String node, CommandSender sender, String offline_target) {
         sendMessage(node, sender, offline_target, null, null, null, null);
     }
 
+    /**
+     * Send message from config to player
+     * @param node path of message
+     * @param sender sender to send to
+     * @param target player target
+     */
     public void sendMessage(String node, CommandSender sender, Player target) {
         sendMessage(node, sender, null, target, null, null, null);
     }
 
+    /**
+     * Send a message to a player
+     * @param node the path of message
+     * @param sender the sender to send to
+     * @param offline_target offline target
+     * @param target player target
+     * @param shop shop to send to
+     * @param holder the holder of the shop
+     * @param item the item in the shop
+     */
     public void sendMessage(String node, CommandSender sender, String offline_target, Player target, BSShop shop, BSShopHolder holder, BSBuy item) {
         if (sender != null) {
 
@@ -84,6 +121,11 @@ public class MessageHandler {
         }
     }
 
+    /**
+     * Send message directly to CommandSender
+     * @param message the message to sender
+     * @param sender the sender to send to
+     */
     public void sendMessageDirect(String message, CommandSender sender) {
         if (sender != null) {
 
@@ -100,10 +142,20 @@ public class MessageHandler {
     }
 
 
+    /**
+     * Get a string from the config
+     * @param node path of node
+     * @return string
+     */
     public String get(String node) {
         return get(node, null, null, null, null);
     }
 
+    /**
+     * Get a raw string from config
+     * @param node path of node
+     * @return raw string
+     */
     public String getRaw(String node) {
         return config.getString(node, node);
     }

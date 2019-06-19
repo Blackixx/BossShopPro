@@ -119,6 +119,9 @@ public class ClassManager {
 
     }
 
+    /**
+     * Setup the dependent classes
+     */
     public void setupDependentClasses() {
         Bukkit.getPluginManager().callEvent(new BSRegisterTypesEvent());
 
