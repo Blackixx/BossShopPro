@@ -212,7 +212,7 @@
 		<dependency>
 			<groupId>de.dustplanet.silkspawners.SilkSpawners</groupId>
 			<artifactId>SilkSpawners</artifactId>
-			<version>5.0.0</version>
+			<version>5.0.2</version>
 			<systemPath>${basedir}/lib/SilkSpawners.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
