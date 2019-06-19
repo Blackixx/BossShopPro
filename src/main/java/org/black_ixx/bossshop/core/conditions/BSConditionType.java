@@ -38,6 +38,7 @@ public abstract class BSConditionType {
             LOCATIONY,
             LOCATIONZ,
             WORLD,
+            WEATHER,
             PLACEHOLDERNUMBER,
             PLACEHOLDERMATCH;
 
@@ -73,6 +74,7 @@ public abstract class BSConditionType {
         LOCATIONY = registerType(new BSConditionTypeLocationY());
         LOCATIONZ = registerType(new BSConditionTypeLocationZ());
         WORLD = registerType(new BSConditionTypeWorld());
+        WEATHER = registerType(new BSConditionTypeWeather());
         PLACEHOLDERNUMBER = registerType(new BSConditionTypePlaceholderNumber());
         PLACEHOLDERMATCH = registerType(new BSConditionTypePlaceholderMatch());
     }
