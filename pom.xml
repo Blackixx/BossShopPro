@@ -131,11 +131,10 @@
 
 		<!-- Adds token manager support -->
 		<dependency>
-			<groupId>me.realized.tm</groupId>
-			<artifactId>Core</artifactId>
+			<groupId>com.github.Realizedd</groupId>
+			<artifactId>TokenManager</artifactId>
 			<version>3.2.3</version>
-			<systemPath>${basedir}/lib/TokenManager.jar</systemPath>
-			<scope>system</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds tokens support -->
@@ -169,9 +168,8 @@
 		<dependency>
 			<groupId>com.vk2gpz.tokenenchant</groupId>
 			<artifactId>TokenEnchantAPI</artifactId>
-			<version>8.0.0</version>
-			<systemPath>${basedir}/lib/TokenEnchantAPI.jar</systemPath>
-			<scope>system</scope>
+			<version>10.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds coins support -->
@@ -187,7 +185,7 @@
 		<dependency>
 			<groupId>com.yapzhenyie.GadgetsMenu</groupId>
 			<artifactId>GadgetsMenu</artifactId>
-			<version>4.1.14</version>
+			<version>4.3.20</version>
 			<systemPath>${basedir}/lib/GadgetsMenu.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
