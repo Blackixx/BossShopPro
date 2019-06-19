@@ -11,6 +11,14 @@ public class CurrencyTools {
 
     //NOTE: THIS CLASS DOES NOT INCLUDE MULTIPLIERS
 
+    /**
+     * Check if a player has enough of a specific currency
+     * @param p the player to check
+     * @param currency the currency to check
+     * @param value the amount to look for
+     * @param fail_message send fail message or not
+     * @return has enough or not
+     */
     public static boolean hasValue(Player p, BSCurrency currency, double value, boolean fail_message) {
         switch (currency) {
             case EXP:
@@ -51,6 +59,13 @@ public class CurrencyTools {
         return false;
     }
 
+    /**
+     * Take currency from a player
+     * @param p player to modify
+     * @param currency the currency to take
+     * @param cost the amount to take
+     * @return the price to take from user
+     */
     public static String takePrice(Player p, BSCurrency currency, double cost) {
         switch (currency) {
             case EXP:
@@ -75,6 +90,12 @@ public class CurrencyTools {
         return "";
     }
 
+    /**
+     * Give a currency reward to a player
+     * @param p the player to modify
+     * @param currency the currency to give
+     * @param reward the amount to give
+     */
     public static void giveReward(Player p, BSCurrency currency, double reward) {
         switch (currency) {
             case EXP:
@@ -104,6 +125,12 @@ public class CurrencyTools {
         }
     }
 
+    /**
+     * Get the display price for something
+     * @param currency the currency to get
+     * @param price the price to check
+     * @return display price
+     */
     public static String getDisplayPrice(BSCurrency currency, double price) {
         switch (currency) {
             case EXP:
