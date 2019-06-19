@@ -31,86 +31,71 @@
 			</plugin>
 		</plugins>
 	</build>
+
 	<repositories>
-        <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public</url>
-        </repository>
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
 		<repository>
-			<id>bungeecord-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</repository>
-		<repository>
-			<id>vault-repo</id>
-			<url>http://nexus.hc.to/content/repositories/pub_releases</url>
-		</repository>
-		<repository>
-			<id>confuser-repo</id>
-			<url>http://ci.frostcast.net/plugin/repository/everything</url>
-		</repository>
-		<repository>
-			<id>lilypad</id>
-			<url>http://ci.lilypadmc.org/plugin/repository/everything</url>
-		</repository>
-		<repository>
-			<id>dakani</id>
-			<url>http://repo.dakanilabs.com/content/repositories/public</url>
-		</repository>
-		<repository>
-			<id>placeholderapi</id>
-			<url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
-		</repository>
-		<repository>
-			<id>lang-utils-repo</id>
-			<url>https://raw.github.com/MascusJeoraly/LanguageUtils/mvn-repo/</url>
+			<id>repo</id>
+			<url>https://repo.glaremasters.me/repository/public/</url>
 		</repository>
 	</repositories>
+
 	<dependencies>
+		<!-- Platform -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.14-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
+		<!-- Used for skull -->
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>craftbukkit</artifactId>
             <version>1.11.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
+		<!-- Used for data handling -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.1</version>
             <scope>provided</scope>
         </dependency>
+
+		<!-- Used for bungee cord -->
 		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-api</artifactId>
 			<version>1.14-SNAPSHOT</version>
 		</dependency>
+
+		<!-- Used for economy -->
 		<dependency>
-			<groupId>net.milkbowl.vault</groupId>
-			<artifactId>Vault</artifactId>
-			<version>1.2.32</version>
+			<groupId>net.milkbowl</groupId>
+			<artifactId>vault</artifactId>
+			<version>1.7</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- Used for placeholders -->
 		<dependency>
 			<groupId>me.clip</groupId>
 			<artifactId>placeholderapi</artifactId>
-			<version>2.0.8</version>
+			<version>2.10.2</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- Used for lilypay -->
 		<dependency>
 			<groupId>lilypad.client.connect</groupId>
 			<artifactId>api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- Adds player points support -->
 		<dependency>
 			<groupId>org.black_ixx</groupId>
 			<artifactId>PlayerPoints</artifactId>
@@ -118,6 +103,8 @@
 			<systemPath>${basedir}/lib/PlayerPoints.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds jobs support -->
 		<dependency>
 			<groupId>com.gamingmesh.jobs</groupId>
 			<artifactId>Jobs</artifactId>
@@ -125,6 +112,8 @@
 			<systemPath>${basedir}/lib/Jobs.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds voting plugin support -->
 		<dependency>
 			<groupId>com.Ben12345rocks.VotingPlugin.Main</groupId>
 			<artifactId>Main</artifactId>
@@ -132,6 +121,8 @@
 			<systemPath>${basedir}/lib/VotingPlugin.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds command points support -->
 		<dependency>
 			<groupId>pgDev.bukkit</groupId>
 			<artifactId>CommandPoints</artifactId>
@@ -139,6 +130,8 @@
 			<systemPath>${basedir}/lib/CommandPoints.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds token manager support -->
 		<dependency>
 			<groupId>me.realized.tm</groupId>
 			<artifactId>Core</artifactId>
@@ -146,6 +139,8 @@
 			<systemPath>${basedir}/lib/TokenManager.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds tokens support -->
 		<dependency>
 			<groupId>com.masterderpydoge.tokens</groupId>
 			<artifactId>TokenCore</artifactId>
@@ -153,6 +148,8 @@
 			<systemPath>${basedir}/lib/Tokens.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds enjin support -->
 		<dependency>
 			<groupId>com.enjin</groupId>
 			<artifactId>EnjinMinecraftPlugin</artifactId>
@@ -160,6 +157,8 @@
 			<systemPath>${basedir}/lib/EnjinMinecraftPlugin.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds points api support -->
 		<dependency>
 			<groupId>me.BukkitPVP</groupId>
 			<artifactId>PointsAPI</artifactId>
@@ -167,6 +166,8 @@
 			<systemPath>${basedir}/lib/PointsAPI.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds token enchant support -->
 		<dependency>
 			<groupId>com.vk2gpz.tokenenchant</groupId>
 			<artifactId>TokenEnchantAPI</artifactId>
@@ -174,6 +175,8 @@
 			<systemPath>${basedir}/lib/TokenEnchantAPI.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds coins support -->
 		<dependency>
 			<groupId>me.justeli.coins.main</groupId>
 			<artifactId>Coins</artifactId>
@@ -181,6 +184,8 @@
 			<systemPath>${basedir}/lib/Coins.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds gadgets menu support -->
 		<dependency>
 			<groupId>com.yapzhenyie.GadgetsMenu</groupId>
 			<artifactId>GadgetsMenu</artifactId>
@@ -188,6 +193,8 @@
 			<systemPath>${basedir}/lib/GadgetsMenu.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds kingdoms support -->
 		<dependency>
 			<groupId>org.kingdoms.main</groupId>
 			<artifactId>Kingdoms</artifactId>
@@ -195,6 +202,8 @@
 			<systemPath>${basedir}/lib/Kingdoms.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds mysql tokens support -->
 		<dependency>
 			<groupId>me.bukkit.mTokens.Inkzzz</groupId>
 			<artifactId>Tokens</artifactId>
@@ -202,6 +211,8 @@
 			<systemPath>${basedir}/lib/MySQLTokens.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds silk spawners support -->
 		<dependency>
 			<groupId>de.dustplanet.silkspawners.SilkSpawners</groupId>
 			<artifactId>SilkSpawners</artifactId>
@@ -209,6 +220,8 @@
 			<systemPath>${basedir}/lib/SilkSpawners.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Adds epic spawners support -->
 		<dependency>
 			<groupId>com.songoda.epicspawners</groupId>
 			<artifactId>EpicSpawners</artifactId>
@@ -216,6 +229,8 @@
 			<systemPath>${basedir}/lib/EpicSpawners.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
+
+		<!-- Used for language utils -->
 		<dependency>
 			<groupId>com.meowj</groupId>
 			<artifactId>LangUtils</artifactId>
