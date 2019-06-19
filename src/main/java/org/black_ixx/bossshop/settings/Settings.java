@@ -39,6 +39,10 @@ public class Settings {
     private Map<Integer, SettingsProperty> properties = new LinkedHashMap<Integer, SettingsProperty>();
 
 
+    /**
+     * Load configuration settings from config
+     * @param config config to load from
+     */
     public void loadConfig(ConfigurationSection config) {
         properties.clear();
         properties.put(HIDE_ITEMS_PLAYERS_DONT_HAVE_PERMISSIONS_FOR, new ShopItemProperty(config, "HideItemsPlayersDoNotHavePermissionsFor", Boolean.class));
@@ -56,12 +60,19 @@ public class Settings {
         properties.put(SOUND_SHOP_CHANGE_SHOP, new ShopProperty(config, "Sound.Shop.ChangeShop", String.class));
     }
 
+    /**
+     * Update a config
+     * @param o config
+     */
     public void update(Object o) {
         for (SettingsProperty property : properties.values()) {
             property.update(o);
         }
     }
 
+    /**
+     * Update config
+     */
     public void update() {
         Configuration main_config = ClassManager.manager.getPlugin().getConfig();
         for (SettingsProperty property : properties.values()) {
@@ -69,11 +80,21 @@ public class Settings {
         }
     }
 
-
+    /**
+     * Get property
+     * @param id id of property
+     * @return property
+     */
     public SettingsProperty getProperty(int id) {
         return properties.get(id);
     }
 
+    /**
+     * Get property boolean
+     * @param id id of property
+     * @param input object to get
+     * @return boolean
+     */
     public boolean getPropertyBoolean(int id, Object input) {
         SettingsProperty property = getProperty(id);
         if (property != null) {
@@ -82,6 +103,13 @@ public class Settings {
         return false;
     }
 
+    /**
+     * Get property int
+     * @param id id of property
+     * @param input object to get
+     * @param def default
+     * @return int
+     */
     public int getPropertyInt(int id, Object input, int def) {
         SettingsProperty property = getProperty(id);
         if (property != null) {
@@ -90,6 +118,13 @@ public class Settings {
         return def;
     }
 
+    /**
+     * Get property string
+     * @param id id of property
+     * @param input object to get
+     * @param def default
+     * @return string
+     */
     public String getPropertyString(int id, Object input, String def) {
         SettingsProperty property = getProperty(id);
         if (property != null) {
