@@ -2,8 +2,10 @@ package org.black_ixx.bossshop.managers.item;
 
 import org.black_ixx.bossshop.core.BSBuy;
 import org.black_ixx.bossshop.managers.ClassManager;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
@@ -42,7 +44,12 @@ public class ItemDataPartPlayerhead extends ItemDataPart {
             NamespacedKey key = new NamespacedKey(ClassManager.manager.getPlugin(), "skullOwnerPlaceholder");
             meta.getCustomTagContainer().setCustomTag(key, ItemTagType.STRING, placeholder);
         } else {
-            meta.setOwner(argument);
+            OfflinePlayer player = Bukkit.getOfflinePlayer(argument);
+            if (player != null) {
+                meta.setOwningPlayer(player);
+            } else {
+                meta.setOwner(argument);
+            }
         }
 
         item.setItemMeta(meta);
