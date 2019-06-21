@@ -5,12 +5,17 @@ import org.black_ixx.bossshop.core.BSShop;
 import org.black_ixx.bossshop.core.BSShopHolder;
 import org.black_ixx.bossshop.managers.ClassManager;
 import org.black_ixx.bossshop.managers.misc.StringManager;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.NamespacedKey;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.inventory.meta.tags.CustomItemTagContainer;
+import org.bukkit.inventory.meta.tags.ItemTagType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,13 +42,24 @@ public class ItemStackTranslator {
                     meta.setLore(splitLore(lore, ClassManager.manager.getSettings().getMaxLineLength(), final_version));
                 }
 
+
                 //Skull itemdata
                 if (meta instanceof SkullMeta) {
                     SkullMeta skullmeta = (SkullMeta) meta;
-                    if (skullmeta.hasOwner()) {
-                        skullmeta.setOwner(ClassManager.manager.getStringManager().transform(skullmeta.getOwner(), buy, shop, holder, target));
+                    NamespacedKey key = new NamespacedKey(ClassManager.manager.getPlugin(), "skullOwnerPlaceholder");
+                    CustomItemTagContainer tagContainer = meta.getCustomTagContainer();
+                    if (tagContainer.hasCustomTag(key, ItemTagType.STRING)) {
+                        String placeholder = tagContainer.getCustomTag(key, ItemTagType.STRING);
+                        if (placeholder != null) {
+                            String playerName = ClassManager.manager.getStringManager().transform(placeholder, target);
+                            OfflinePlayer transformedPlayer = Bukkit.getOfflinePlayer(playerName);
+                            if (transformedPlayer != null) {
+                                skullmeta.setOwningPlayer(transformedPlayer);
+                            } else {
+                                skullmeta.setOwner(playerName);
+                            }
+                        }
                     }
-
                 }
 
                 item.setItemMeta(meta);

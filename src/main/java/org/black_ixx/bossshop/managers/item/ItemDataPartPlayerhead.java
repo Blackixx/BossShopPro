@@ -2,10 +2,14 @@ package org.black_ixx.bossshop.managers.item;
 
 import org.black_ixx.bossshop.core.BSBuy;
 import org.black_ixx.bossshop.managers.ClassManager;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.inventory.meta.tags.ItemTagType;
 
 import java.util.List;
 
@@ -20,21 +24,17 @@ public class ItemDataPartPlayerhead extends ItemDataPart {
 
         SkullMeta meta = (SkullMeta) item.getItemMeta();
 
-		/*if(argument.contains("%")){
-			//just a placeholder! Mark the placeholder! TODO
-		}else{
-
-			OfflinePlayer p;
-			try{
-				UUID uuid = UUID.fromString(argument);
-				p = Bukkit.getOfflinePlayer(uuid);
-			}catch(IllegalArgumentException e){
-				p = Bukkit.getOfflinePlayer(argument);
-			}
-			meta.setOwningPlayer(p);
-		}*/
-        //meta.setOwner(null); //might fix paperspigot issue when setting the owner to a placeholder
-        meta.setOwner(argument);
+        if (ClassManager.manager.getStringManager().checkStringForFeatures(null, null, null, argument)) {
+            NamespacedKey key = new NamespacedKey(ClassManager.manager.getPlugin(), "skullOwnerPlaceholder");
+            meta.getCustomTagContainer().setCustomTag(key, ItemTagType.STRING, argument); //argument = placeholder
+        } else {
+            OfflinePlayer player = Bukkit.getOfflinePlayer(argument);
+            if (player != null) {
+                meta.setOwningPlayer(player);
+            } else {
+                meta.setOwner(argument);
+            }
+        }
 
         item.setItemMeta(meta);
         return item;

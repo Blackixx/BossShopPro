@@ -7,7 +7,12 @@ public class BSConditionTypeWeather extends BSConditionTypeMatch {
 
     @Override
     public boolean matches(Player p, String single_condition) {
-        return p.getWorld().hasStorm();
+        if (single_condition.equalsIgnoreCase("storm")) {
+            return p.getWorld().hasStorm();
+        } else if (single_condition.equalsIgnoreCase("clear")) {
+            return !p.getWorld().hasStorm();
+        }
+        return false;
     }
 
 
@@ -18,7 +23,7 @@ public class BSConditionTypeWeather extends BSConditionTypeMatch {
 
     @Override
     public String[] createNames() {
-        return new String[]{"storming", "raining"};
+        return new String[]{"weather"};
     }
 
 
