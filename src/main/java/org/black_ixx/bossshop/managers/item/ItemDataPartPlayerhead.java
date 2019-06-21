@@ -24,25 +24,9 @@ public class ItemDataPartPlayerhead extends ItemDataPart {
 
         SkullMeta meta = (SkullMeta) item.getItemMeta();
 
-		/*if(argument.contains("%")){
-			//just a placeholder! Mark the placeholder! TODO
-		}else{
-
-			OfflinePlayer p;
-			try{
-				UUID uuid = UUID.fromString(argument);
-				p = Bukkit.getOfflinePlayer(uuid);
-			}catch(IllegalArgumentException e){
-				p = Bukkit.getOfflinePlayer(argument);
-			}
-			meta.setOwningPlayer(p);
-		}*/
-        //meta.setOwner(null); //might fix paperspigot issue when setting the owner to a placeholder
-
         if (ClassManager.manager.getStringManager().checkStringForFeatures(null, null, null, argument)) {
-            String placeholder = ClassManager.manager.getStringManager().transform(argument);
             NamespacedKey key = new NamespacedKey(ClassManager.manager.getPlugin(), "skullOwnerPlaceholder");
-            meta.getCustomTagContainer().setCustomTag(key, ItemTagType.STRING, placeholder);
+            meta.getCustomTagContainer().setCustomTag(key, ItemTagType.STRING, argument); //argument = placeholder
         } else {
             OfflinePlayer player = Bukkit.getOfflinePlayer(argument);
             if (player != null) {
