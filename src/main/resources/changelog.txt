@@ -1,6 +1,10 @@
 ﻿BossShopPro
 by Felix Neubauer
 
+v2.0.6 [BETA]
+*[ADD] Added weather condition
+*[IMPROVE] Improved playerhead ItemData
+
 v2.0.5
 *[UPDATE] Updated EpicSpawners support
 *[FIX] Fixed signs not working
