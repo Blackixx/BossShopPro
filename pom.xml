@@ -222,7 +222,7 @@
 		<dependency>
 			<groupId>com.songoda.epicspawners</groupId>
 			<artifactId>EpicSpawners</artifactId>
-			<version>6-Pre-release-10</version>
+			<version>6</version>
 			<systemPath>${basedir}/lib/EpicSpawners.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
