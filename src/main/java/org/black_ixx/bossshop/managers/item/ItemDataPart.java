@@ -28,6 +28,7 @@ public abstract class ItemDataPart {
             ENCHANTMENT,
             PLAYERHEAD,
             CUSTOMSKULL,
+            CUSTOMMODELDATA,
             MOBSPAWNER,
             MOBEGG,
             ITEMFLAGS,
@@ -52,6 +53,7 @@ public abstract class ItemDataPart {
         LORE = registerType(new ItemDataPartLore());
         ENCHANTMENT = registerType(new ItemDataPartEnchantment());
         PLAYERHEAD = registerType(new ItemDataPartPlayerhead());
+        CUSTOMMODELDATA = registerType(new ItemDataPartCustomModelData());
         MOBSPAWNER = registerType(new ItemDataPartMobspawner());
         MOBEGG = registerType(new ItemDataPartMobEgg());
         CUSTOMSKULL = registerType(new ItemDataPartCustomSkull());

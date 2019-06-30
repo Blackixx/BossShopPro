@@ -54,7 +54,7 @@ public class ItemDataPartDurability extends ItemDataPart {
 
     @Override
     public String[] createNames() {
-        return new String[]{"damage", "durability", "subid, custommodeldata"};
+        return new String[]{"damage", "durability", "subid"};
     }
 
 
