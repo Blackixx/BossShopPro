@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.black_ixx</groupId>
 	<artifactId>BossShopPro</artifactId>
-	<version>2.0.6</version>
+	<version>2.0.7</version>
 	<name>BossShopPro</name>
 	<description>Create virtual chest shops</description>
 	<build>
@@ -83,7 +83,7 @@
 		<dependency>
 			<groupId>me.clip</groupId>
 			<artifactId>placeholderapi</artifactId>
-			<version>2.10.2</version>
+			<version>2.10.3</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -222,7 +222,7 @@
 		<dependency>
 			<groupId>com.songoda.epicspawners</groupId>
 			<artifactId>EpicSpawners</artifactId>
-			<version>6-Pre-release-10</version>
+			<version>6</version>
 			<systemPath>${basedir}/lib/EpicSpawners.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
