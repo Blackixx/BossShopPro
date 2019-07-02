@@ -17,7 +17,9 @@ public class ItemDataPartCustomModelData extends ItemDataPart {
             ClassManager.manager.getBugFinder().severe("Mistake in Config: '" + argument + "' is not a valid '" + used_name + "'. It needs to be a number like '1', '12' or '64'.");
             return item;
         }
-        item.getItemMeta().setCustomModelData(custommodeldata);
+        ItemMeta meta = item.getItemMeta();
+        meta.setCustomModelData(custommodeldata);
+        item.setItemMeta(meta);
         return item;
     }
 
@@ -42,7 +44,7 @@ public class ItemDataPartCustomModelData extends ItemDataPart {
 
     @Override
     public int getPriority() {
-        return PRIORITY_EARLY;
+        return PRIORITY_NORMAL;
     }
 
     @Override
