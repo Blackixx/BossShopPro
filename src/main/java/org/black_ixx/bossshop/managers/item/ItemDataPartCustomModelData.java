@@ -28,7 +28,7 @@ public class ItemDataPartCustomModelData extends ItemDataPart {
         if (shop_item.hasItemMeta() && player_item.hasItemMeta()) {
             return shop_item.getItemMeta().getCustomModelData() == player_item.getItemMeta().getCustomModelData();
         }
-        return false;
+        return true;
     }
 
     @Override
