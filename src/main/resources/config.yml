@@ -156,7 +156,7 @@ NumberDisplay:
 SellAllPlaceholderShowFinalReward: false
 #
 #
-# ExpUseLevels: If enabled rewards of type 'Exp' stand for "Exp level". Set this to false if you want to sell plain exp. This affects rewards only.
+# ExpUseLevels: If enabled rewards of type 'Exp' stand for "Exp level". Set this to false if you want to use plain exp.
 ExpUseLevels: true
 #
 #
