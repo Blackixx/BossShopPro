@@ -30,20 +30,32 @@ public class BSPriceTypeExp extends BSPriceTypeNumber {
 
     @Override
     public boolean hasPrice(Player p, BSBuy buy, Object price, ClickType clickType, int multiplier, boolean messageOnFailure) {
-        int exp = (int) ClassManager.manager.getMultiplierHandler().calculatePriceWithMultiplier(p, buy, clickType, (Integer) price) * multiplier;
-        if ((p.getLevel() < (Integer) exp)) {
-            if (messageOnFailure) {
-                ClassManager.manager.getMessageHandler().sendMessage("NotEnough.Exp", p);
-            }
-            return false;
-        }
-        return true;
+    	int exp = (int) ClassManager.manager.getMultiplierHandler().calculatePriceWithMultiplier(p, buy, clickType, (Integer) price) * multiplier;      
+    	if (ClassManager.manager.getSettings().getExpUseLevel()) {
+    		if ((p.getLevel() < (Integer) exp)) {
+    			if (messageOnFailure) {
+    				ClassManager.manager.getMessageHandler().sendMessage("NotEnough.Exp", p);
+    			}
+    			return false;
+    		}
+    	}
+    	else if ((p.getTotalExperience() < (Integer) exp)) {
+    		if (messageOnFailure) {
+    			ClassManager.manager.getMessageHandler().sendMessage("NotEnough.Exp", p);
+    		}
+    		return false;
+    	}
+    	return true;
     }
 
     @Override
     public String takePrice(Player p, BSBuy buy, Object price, ClickType clickType, int multiplier) {
-        int exp = (int) ClassManager.manager.getMultiplierHandler().calculatePriceWithMultiplier(p, buy, clickType, (Integer) price) * multiplier;
-        p.setLevel(p.getLevel() - exp);
+        int exp = (int) ClassManager.manager.getMultiplierHandler().calculatePriceWithMultiplier(p, buy, clickType, (Integer) price) * multiplier;      
+        if (ClassManager.manager.getSettings().getExpUseLevel()) {
+            p.setLevel(p.getLevel() - exp);
+        } else {
+            p.giveExp(-exp);
+        }
 
         return getDisplayBalance(p, buy, price, clickType);
     }
