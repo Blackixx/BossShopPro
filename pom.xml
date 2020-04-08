@@ -37,6 +37,22 @@
 			<id>repo</id>
 			<url>https://repo.glaremasters.me/repository/public/</url>
 		</repository>
+		<!-- Bundabrg's Repo -->
+		<repository>
+			<id>bundabrg-repo</id>
+			<url>https://repo.worldguard.com.au/repository/maven-public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<!-- Jitpack -->
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -47,6 +63,14 @@
             <version>1.14-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.12</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<!-- Used for skull -->
         <dependency>
@@ -107,16 +131,15 @@
 		<dependency>
 			<groupId>com.gamingmesh.jobs</groupId>
 			<artifactId>Jobs</artifactId>
-			<version>1.0</version>
-			<systemPath>${basedir}/lib/Jobs.jar</systemPath>
-			<scope>system</scope>
+			<version>4.9.1</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds voting plugin support -->
 		<dependency>
 			<groupId>com.github.Ben12345rocks</groupId>
 			<artifactId>VotingPlugin</artifactId>
-			<version>5.19</version>
+			<version>LATEST</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -125,8 +148,7 @@
 			<groupId>pgDev.bukkit</groupId>
 			<artifactId>CommandPoints</artifactId>
 			<version>1.0</version>
-			<systemPath>${basedir}/lib/CommandPoints.jar</systemPath>
-			<scope>system</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds token manager support -->
@@ -142,71 +164,65 @@
 			<groupId>com.masterderpydoge.tokens</groupId>
 			<artifactId>TokenCore</artifactId>
 			<version>1.4</version>
-			<systemPath>${basedir}/lib/Tokens.jar</systemPath>
-			<scope>system</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds enjin support -->
 		<dependency>
 			<groupId>com.enjin</groupId>
 			<artifactId>EnjinMinecraftPlugin</artifactId>
-			<version>3.5.6</version>
-			<systemPath>${basedir}/lib/EnjinMinecraftPlugin.jar</systemPath>
-			<scope>system</scope>
+			<version>3.5.7</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds points api support -->
 		<dependency>
 			<groupId>me.BukkitPVP</groupId>
 			<artifactId>PointsAPI</artifactId>
-			<version>1.5.1</version>
-			<systemPath>${basedir}/lib/PointsAPI.jar</systemPath>
-			<scope>system</scope>
+			<version>1.6.8</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds token enchant support -->
 		<dependency>
 			<groupId>com.vk2gpz.tokenenchant</groupId>
 			<artifactId>TokenEnchantAPI</artifactId>
-			<version>8.0.0</version>
-			<systemPath>${basedir}/lib/TokenEnchantAPI.jar</systemPath>
-			<scope>system</scope>
+			<version>15.3.2</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds coins support -->
 		<dependency>
 			<groupId>me.justeli.coins.main</groupId>
 			<artifactId>Coins</artifactId>
-			<version>1.4</version>
-			<systemPath>${basedir}/lib/Coins.jar</systemPath>
-			<scope>system</scope>
+			<version>1.9.2</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds gadgets menu support -->
 		<dependency>
 			<groupId>com.yapzhenyie.GadgetsMenu</groupId>
 			<artifactId>GadgetsMenu</artifactId>
-			<version>4.3.20</version>
-			<systemPath>${basedir}/lib/GadgetsMenu.jar</systemPath>
-			<scope>system</scope>
+			<version>4.3.32</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds kingdoms support -->
+		<!-- Provided stubs
 		<dependency>
 			<groupId>org.kingdoms.main</groupId>
 			<artifactId>Kingdoms</artifactId>
 			<version>8.5.3</version>
 			<systemPath>${basedir}/lib/Kingdoms.jar</systemPath>
 			<scope>system</scope>
-		</dependency>
+		</dependency>-->
 
 		<!-- Adds mysql tokens support -->
 		<dependency>
 			<groupId>me.bukkit.mTokens.Inkzzz</groupId>
 			<artifactId>Tokens</artifactId>
-			<version>1.0</version>
-			<systemPath>${basedir}/lib/MySQLTokens.jar</systemPath>
-			<scope>system</scope>
+			<version>1.2</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds silk spawners support -->
@@ -214,18 +230,18 @@
 			<groupId>de.dustplanet.silkspawners.SilkSpawners</groupId>
 			<artifactId>SilkSpawners</artifactId>
 			<version>5.0.2</version>
-			<systemPath>${basedir}/lib/SilkSpawners.jar</systemPath>
-			<scope>system</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Adds epic spawners support -->
+		<!-- Provided stubs
 		<dependency>
 			<groupId>com.songoda.epicspawners</groupId>
 			<artifactId>EpicSpawners</artifactId>
 			<version>6</version>
 			<systemPath>${basedir}/lib/EpicSpawners.jar</systemPath>
 			<scope>system</scope>
-		</dependency>
+		</dependency>-->
 
 		<!-- Used for language utils -->
 		<dependency>
