@@ -1,6 +1,11 @@
 ﻿BossShopPro
 by Felix Neubauer
 
+v2.0.9 [BETA]
+* [ADD] Added support for hex color codes
+* [WARNING] In case of automated line splits (because of the "split lore lines which are too long into multiple lines" feature), the new lines will not continue using the color of the previous line. This is expected to be fixed in the close future, when Spigot API is adjusted.
+
+
 v2.0.8
 * [FIX] Fixed selling items no longer working
 
