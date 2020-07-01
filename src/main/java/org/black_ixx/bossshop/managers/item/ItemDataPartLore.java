@@ -16,7 +16,11 @@ public class ItemDataPartLore extends ItemDataPart {
     @Override
     public ItemStack transform(ItemStack item, String used_name, String argument) {
         ItemMeta meta = item.getItemMeta();
-        String[] parts = argument.split("[#\\n]");
+        // although not the most beautiful solution, what it does is the following:
+        // it causes all hex color codes (started by hashtag) to be transformed already.
+        // Therefore, all remaining hashtags are safe to interpret as new line (traditional BossShop line separator).
+        String argumentTransformed = ClassManager.manager.getStringManager().transform(argument);
+        String[] parts = argumentTransformed.split("[#\\n]");
         List<String> lore = meta.getLore();
         if (lore == null) {
             lore = new ArrayList<>();

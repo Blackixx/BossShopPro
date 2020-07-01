@@ -17,8 +17,13 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class StringManager {
+
+    private static final Pattern hexPattern = Pattern.compile("(#[a-fA-F0-9]{6})");
 
     /**
      * Transform specific strings from one thing to another
@@ -29,6 +34,12 @@ public class StringManager {
         if (s == null) {
             return null;
         }
+        Matcher matcher = hexPattern.matcher(s);
+        while (matcher.find()) {
+            String color = s.substring(matcher.start(), matcher.end());
+            s = s.replace(color, "" + net.md_5.bungee.api.ChatColor.of(color));
+        }
+
         s = s.replace("[<3]", "❤");
         s = s.replace("[*]", "★");
         s = s.replace("[**]", "✹");
@@ -144,7 +155,12 @@ public class StringManager {
     public boolean checkStringForFeatures(BSShop shop, BSBuy buy, ItemStack menu_item, String s) { //Returns true if this would make a shop customizable
         boolean b = false;
 
-        if (s != null && s.contains("%")) {
+
+        if (s.matches(hexPattern.pattern())) {
+            b = true;
+        }
+
+        if (s.contains("%")) {
 
             if (s.contains("%balance%")) {
                 ClassManager.manager.getSettings().setBalanceVariableEnabled(true);
