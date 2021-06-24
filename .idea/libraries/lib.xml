@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/LangUtils-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Coins-1.10.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/TokenManager-3.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Jobs5.0.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/GadgetsMenu.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/CommandPoints.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/PointsAPI.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsX-2.18.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/TokenEnchantAPI-15.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/PlaceholderAPI-2.10.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/VotingPlugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/PlayerPoints.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Client-Connect-API.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/BungeeCord.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tokens.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Vault.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EnjinMinecraftPlugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/MySQLTokens.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/SilkSpawners.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

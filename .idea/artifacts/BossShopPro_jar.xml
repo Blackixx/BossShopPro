@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BossShopPro:jar">
+    <output-path>$PROJECT_DIR$/../../../Servidor Dev Paper 1.17/plugins</output-path>
+    <root id="archive" name="BossShopPro.jar">
+      <element id="module-output" name="BossShopPro" />
+    </root>
+  </artifact>
+</component>

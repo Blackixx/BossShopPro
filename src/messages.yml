@@ -1,0 +1,60 @@
+#Here you can define all BossShopPro texts displayed to players. Leave a line empty in order to disable a message.
+Main:
+  NoPermission: '&cYou are not allowed to do this!'
+  AlreadyBought: '&cYou already purchased that!'
+  ShopNotExisting: '&cThat shop is not existing...'
+  ShopItemNotExisting: '&cThat shop item is not existing...'
+  OpenShop: ''
+  OpenShopOtherPlayer: '&6Opening Shop &c%shop% &6for %player%&6.'
+  CloseShopOtherPlayer: '&6Closed inventory of %player%&6.'
+  CloseShop: ''
+  InventoryFull: '&cYour inventory does not have enough free space left!'
+  PlayerNotFound: '&cPlayer %name% not found!'
+  ClickSpamWarning: '&cPlease wait for an other %time_left% seconds until you can use this again.'
+  OffensiveClickSpamWarning: '&4Warning: Please do not click that fast.'
+  OffensiveClickSpamKick: '&4Kicked for clickspam.'
+  NeedItemInHand: '&cYou need an item in your main hand in order to be able to execute this command.'
+  PrintedItemInfo: '&6All item information has successfully been saved here: &7''/plugins/BossShopPro/ItemDataStorage.yml''&6.'
+  ListAndSeparator: ' & '
+  ListOrSeparator: ' or '
+Economy:
+  NoAccount: '&cYou don''t have an economy account!'
+NotEnough:
+  Money: '&cYou don''t have enough Money!'
+  Item: '&cYou don''t have enough Items!'
+  Points: '&cYou don''t have enough Points!'
+  Exp: '&cYou don''t have enough EXP!'
+  Or: '&cYou don''t have enough resources!'
+Enchantment:
+  Invalid: '&cYou can''t enchant the item in your main hand with this enchantment!'
+  EmptyHand: '&cYou need to have an item in your hand!'
+Display:
+  Exp: '%levels% Exp Levels'
+  Money: '%money% Money'
+  Points: '%points% Points'
+  Item: '%items%'
+  ItemAll: 'all %item%'
+  ItemAllBuy: 'a filled inventory of %item%'
+  ItemAllEach: '%value% each'
+  Nothing: 'nothing'
+  BungeeCordServer: 'Server teleport to %server%'
+  BungeeCordCommand: 'BungeeCord commands: %commands%'
+  Close: 'Close shop'
+  Command: 'Console commands: %commands%'
+  Custom: 'Unknown'
+  Enchantment: 'Enchantment: %type% level %level%'
+  Permission: 'Permissions: %permissions%'
+  PlayerCommand: 'Commands: %commands%'
+  PlayerCommandOp: 'Commands: %commands%'
+  Shop: 'Open shop %shop%'
+  Page: 'Open shop page %page%'
+Time:
+  Seconds: '%time% seconds'
+  Minutes: '%time% minutes'
+  Hours: '%time% hours'
+  Days: '%time% days'
+  Weeks: '%time% weeks'
+#You can make BossShopPro translate every enchantment and item into any language included in Vanilla minecraft.
+#Optional & requires LangUtils to be installed (https://www.spigotmc.org/resources/1-10-x-1-9-x-1-8-x-1-7-10-language-utils.8859/)
+#Here you can find a list of locale ids: http://www.oracle.com/technetwork/java/javase/javase7locales-334809.html
+Locale: en_US

@@ -1,0 +1,5 @@
+name: BossShopPro
+main: org.black_ixx.bossshoppro.bungeecord.BSPBungeeCordPlugin
+version: ${project.version}
+description: BungeeCord plugin for BossShopPro
+author: Black_ixx
