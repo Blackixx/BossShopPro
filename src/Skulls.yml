@@ -5,252 +5,254 @@ signs:
   text: '[Skulls]'
   NeedPermissionToCreateSign: false
 shop:
-  skull_custom:
-    MenuItem:
-      - type:PLAYER_HEAD
-      - name:&f&lCustom Skull Texture
-      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5Y2M1OGFkMjVhMWFiMTZkMzZiYjVkNmQ0OTNjOGY1ODk4YzJiZjMwMmI2NGUzMjU5MjFjNDFjMzU4NjcifX19
-      - lore:&8Click to generate a custom skull
-    RewardType: item
-    Reward:
-      - - type:PLAYER_HEAD
-        - customskull:%input%
-    PriceType: NOTHING
-    Message: ''
-    ExtraPermission: ''
-    InventoryLocation: 1
-    ForceInput: text
-    ForceInputMessage: '&7Please enter the code of a custom skull texture. You can find texture codes here: &6https://minecraft-heads.com/custom/heads&8.\n&7Tip: The texture code usually starts with &6ey &7and can be found within the textboxes when you select a head.\n&7An example is shown here: &6https://i.gyazo.com/15f959cd994247a629720d9de052db78.png&7.\n&7You might need to re-click the custom skull button if you take to much time searching textures.'
   skull_hamburger:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTQxMWNiNTRhYWExZTNkYjU1NWM3ODVmNmI3NWJlMWJmOGU2OGIyOGU1Y2ZjNTljOWE4NzY4OTRmNjFjZGMxNyJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZlZjFjMjVmNTE2ZjJlN2Q2Zjc2Njc0MjBlMzNhZGNmM2NkZjkzOGNiMzdmOWE0MWE4YjM1ODY5ZjU2OWIifX19
-        - name:&f&lHamburger
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Hamburger\"}"},SkullOwner:{Id:[I;138271069,-1989589664,-1155210853,473275215],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTQxMWNiNTRhYWExZTNkYjU1NWM3ODVmNmI3NWJlMWJmOGU2OGIyOGU1Y2ZjNTljOWE4NzY4OTRmNjFjZGMxNyJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 1
   skull_grass:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk1ZDM3OTkzZTU5NDA4MjY3ODQ3MmJmOWQ4NjgyMzQxM2MyNTBkNDMzMmEyYzdkOGM1MmRlNDk3NmIzNjIifX19
-        - name:&f&lGrass
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Grass Block\"}"},SkullOwner:{Id:[I;2036210392,-563261732,-1581953430,-1392278525],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 2
   skull_stone:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTc0Y2Y2NTFjZjg5NmM2MWIyNzlhZDk5YjAyMmZkNGM3OGRhOWUzYjJlOTRiNjJhNmMxOTZhMTg4MmI0OTEifX19
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGMxNzU0ODUxZTM2N2U4YmViYTJhNmQ4ZjdjMmZlZGU4N2FlNzkzYWM1NDZiMGYyOTlkNjczMjE1YjI5MyJ9fX0=
-        - name:&f&lStone
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Cobblestone K\"}"},SkullOwner:{Id:[I;-1879356125,1847283641,-1322324663,1750202552],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTc0Y2Y2NTFjZjg5NmM2MWIyNzlhZDk5YjAyMmZkNGM3OGRhOWUzYjJlOTRiNjJhNmMxOTZhMTg4MmI0OTEifX19"}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 3
-  skull_chest:
+  skull_youtube:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmI3Njg4ZGE0NjU4NmI4NTlhMWNkZTQwY2FlMWNkYmMxNWFiZTM1NjE1YzRiYzUyOTZmYWQwOTM5NDEwNWQwIn19fQ==
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDVjNmRjMmJiZjUxYzM2Y2ZjNzcxNDU4NWE2YTU2ODNlZjJiMTRkNDdkOGZmNzE0NjU0YTg5M2Y1ZGE2MjIifX19
-        - name:&f&lChest
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"YouTube\"}"},SkullOwner:{Id:[I;-1675450529,1013534268,-1916190276,146400452],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmI3Njg4ZGE0NjU4NmI4NTlhMWNkZTQwY2FlMWNkYmMxNWFiZTM1NjE1YzRiYzUyOTZmYWQwOTM5NDEwNWQwIn19fQ=="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 4
-  skull_arrow_left:
+  skull_end_portal_fumes:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTJjY2I4NGY5YzBjYmIyZWI3YjlhYmJiN2E0ZmM3YjMxODYxNTBkNWU3ZGIwMTg1MmFjNmQ0OTVkZTE3ZTgxMiJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzM3NjQ4YWU3YTU2NGE1Mjg3NzkyYjA1ZmFjNzljNmI2YmQ0N2Y2MTZhNTU5Y2U4YjU0M2U2OTQ3MjM1YmNlIn19fQ==
-        - name:&f&lArrow left
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"End Portal Fumes\"}"},SkullOwner:{Id:[I;-554641476,2023245120,-1545602762,1380044226],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTJjY2I4NGY5YzBjYmIyZWI3YjlhYmJiN2E0ZmM3YjMxODYxNTBkNWU3ZGIwMTg1MmFjNmQ0OTVkZTE3ZTgxMiJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 5
-  skull_arrow_right:
+  skull_canary_melon:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDc1OTFiNDFhYTc1YmFjNjM5MWFmMzc4ZDRjMjRhYTI4ZTYwYThhZTg4YTA4NTIxM2M4MTJkMWM5ZWU2NjdkMCJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0ZjY4YzhmYjI3OWU1MGFiNzg2ZjlmYTU0Yzg4Y2E0ZWNmZTFlYjVmZDVmMGMzOGM1NGM5YjFjNzIwM2Q3YSJ9fX0=
-        - name:&f&lArrow right
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Canary Melon\"}"},SkullOwner:{Id:[I;-1589949379,-527675735,-2021890436,-10851194],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDc1OTFiNDFhYTc1YmFjNjM5MWFmMzc4ZDRjMjRhYTI4ZTYwYThhZTg4YTA4NTIxM2M4MTJkMWM5ZWU2NjdkMCJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 6
-  skull_arrow_up:
+  skull_apple:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTIxMTI3ZDIyNjc1YzVjNzY5YTBjMDhiNTcyMDE4ZDI5OWM4MzA0NmY4ZTFmOTQzZWQ5ZDUxYmUwM2IwNyJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzNjZjE2NmE4MjZkODU1NDU0ZWQ0ZDRlYTVmZTMzZjNkZWVhYTQ0Y2NhYTk5YTM0OGQzOTY4NWJhNzFlMWE0ZiJ9fX0=
-        - name:&f&lArrow up
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Apple\"}"},SkullOwner:{Id:[I;1773962895,-939242600,-1676573066,1848849180],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTIxMTI3ZDIyNjc1YzVjNzY5YTBjMDhiNTcyMDE4ZDI5OWM4MzA0NmY4ZTFmOTQzZWQ5ZDUxYmUwM2IwNyJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 7
-  skull_arrow_down:
+  skull_fruit_basket:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzkzZjM0ZDZlZDk0NGZlNDA5MjRkMjIzMTNjMzdlMWJjMTljOTc3M2JiY2I0ZWM2OGI5NmM5NmYxNDlhMTMwIn19fQ==
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzhjYTc2MTVjYjgzN2Y2OTRlNDk2ZmY4YTk4NTNjZDdkYjVmZDg1NTI5ZGNhZDk4Yzc4YmEyNmMzZTRmNjg3In19fQ==
-        - name:&f&lArrow down
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Fruit Basket\"}"},SkullOwner:{Id:[I;-1334993903,110710389,-1175265369,1921999115],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzkzZjM0ZDZlZDk0NGZlNDA5MjRkMjIzMTNjMzdlMWJjMTljOTc3M2JiY2I0ZWM2OGI5NmM5NmYxNDlhMTMwIn19fQ=="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 8
-  skull_cactus:
+  skull_tv:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWQxZTk5NzkyODlmMDMwOTlhN2M1ODdkNTJkNDg4ZTI2ZTdiYjE3YWI1OTRiNjlmOTI0MzhkNzdlYWJjIn19fQ==
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmY1ODViNDFjYTVhMWI0YWMyNmY1NTY3NjBlZDExMzA3Yzk0ZjhmOGExYWRlNjE1YmQxMmNlMDc0ZjQ3OTMifX19
-        - name:&f&lCactus
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"TV\"}"},SkullOwner:{Id:[I;-553362240,2127121596,-2112278877,786484612],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWQxZTk5NzkyODlmMDMwOTlhN2M1ODdkNTJkNDg4ZTI2ZTdiYjE3YWI1OTRiNjlmOTI0MzhkNzdlYWJjIn19fQ=="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 9
-  skull_log_oak:
+  skull_pepe:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI2YmVlOGZlOTNhNmNlYTkzNDg4MjU4YTA2MzA0YzcyN2E4ZDhlYTBlMjU2ZmZhMjhiOGJmNjRkZDU0ZDJkMyJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRhYWRhNGQ5ZmNlZGE5MDE4NjkxOGQ2Y2EzNWI5YTBlYWQ4ZTRiMTRjOWQ5NDI3MTU3ZWU5YjkzMzlkN2IxIn19fQ==
-        - name:&f&lOak log
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Pepe\"}"},SkullOwner:{Id:[I;348873907,-1079882617,-2118388504,1013544837],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI2YmVlOGZlOTNhNmNlYTkzNDg4MjU4YTA2MzA0YzcyN2E4ZDhlYTBlMjU2ZmZhMjhiOGJmNjRkZDU0ZDJkMyJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 10
-  skull_log_spruce:
+  skull_target_green:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTgwMGFlY2UxNjM2ZTBkZWQ3ZDlmYWQxNzAyYjhhNTYyZGU4N2U3YzgyNjI3Njk3ZWZmZThjM2Y2ZjcxYTYifX19
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2I4NDZjYTcxYmIzMzIxYzA5MDZiYjFiNTczYWFiYTIyNGE1MjhlYTgyNjM5MmRiM2I1N2YzNGQzMDcxZDMifX19
-        - name:&f&lSpruce log
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Penguin\"}"},SkullOwner:{Id:[I;-1538876851,450249340,-1090802258,-1020720367],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTgwMGFlY2UxNjM2ZTBkZWQ3ZDlmYWQxNzAyYjhhNTYyZGU4N2U3YzgyNjI3Njk3ZWZmZThjM2Y2ZjcxYTYifX19"}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 11
-  skull_log_birch:
+  skull_penguin:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWVhNzU5Zjk3OWI5YjhlYTgzMWNhN2UyZDY2ZGYxNDgyOTNmMWE1MTQ3OTgzYjUyYzQ4ZWZlMmMzMTVlIn19fQ==
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTk5MWYzYjczZWJiOWRlYzkxZWRkYzgzNjFjYTJmZWNmNTI4MGQyYzczM2VkYTllY2I2OTVmODNkMTU4MCJ9fX0=
-        - name:&f&lBirch log
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Penguin\"}"},SkullOwner:{Id:[I;-1538876851,450249340,-1090802258,-1020720367],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWVhNzU5Zjk3OWI5YjhlYTgzMWNhN2UyZDY2ZGYxNDgyOTNmMWE1MTQ3OTgzYjUyYzQ4ZWZlMmMzMTVlIn19fQ=="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 12
-  skull_log_jungle:
+  skull_clock:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMyYzYxNzE1MzJhMmE4N2YwZWViMjhlZGQwMTA4MzNmMzNmMGFlNjg0MWE1MjRlMWI1MjAwYTM1ZDM4NTA1MCJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjIzNWU5YjgzMmFlYjE4OGIzNTk1M2ZjMzhjMmM4ZjU1Y2U3YTQ0YTEyZGY4YmM5MzIxNzBmY2Q2NzU3YmYzIn19fQ==
-        - name:&f&lJungle log
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Clock\"}"},SkullOwner:{Id:[I;103456769,-2099689326,-1964949369,809530189],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMyYzYxNzE1MzJhMmE4N2YwZWViMjhlZGQwMTA4MzNmMzNmMGFlNjg0MWE1MjRlMWI1MjAwYTM1ZDM4NTA1MCJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 13
-  skull_lapis:
+  skull_twitch:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiZTY1ZjQ0Y2QyMTAxNGM4Y2RkZDAxNThiZjc1MjI3YWRjYjFmZDE3OWY0YzFhY2QxNThjODg4NzFhMTNmIn19fQ==
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY1NGI2ZDk0OWE0NmQ4NmVjMDE1NDhjODkyYTU2OGI4Y2RhZDQ2NDZjYjJlMjk2ZDBkZDU4YWY3Nzk0NzEifX19
-        - name:&f&lLapis ore
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Twitch\"}"},SkullOwner:{Id:[I;-444833672,186601352,-1754425478,1479831935],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiZTY1ZjQ0Y2QyMTAxNGM4Y2RkZDAxNThiZjc1MjI3YWRjYjFmZDE3OWY0YzFhY2QxNThjODg4NzFhMTNmIn19fQ=="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 14
-  skull_diamond:
+  skull_barrel_of_wheat:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2FhNTk2NmExNDcyNDQ1MDRjYzU2ZWY2ZWZkMmQyZjQ0NzM4YjhmMDNkOTNhNjE3NjZhZjNmYzQ0ODdmOTgwYiJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTFlZDlhYmY1MWZlNGVhODRjZmNiMjcyOTdmMWJjNTRjZDM4MmVkZjg1ZTdiZDZlNzVlY2NhMmI4MDY2MTEifX19
-        - name:&f&lDiamond ore
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Barrel of Wheat\"}"},SkullOwner:{Id:[I;814979805,145637813,-2144348838,1416403462],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2FhNTk2NmExNDcyNDQ1MDRjYzU2ZWY2ZWZkMmQyZjQ0NzM4YjhmMDNkOTNhNjE3NjZhZjNmYzQ0ODdmOTgwYiJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 15
-  skull_eye:
+  skull_sushi:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTc5ZTQxYzE0NmI5NTQ5Nzg2YmRiNzEzOGYzNDlmZDdjMzk1MjkwMWY4N2NhOWMyMjU4OWNhMmFlNjQ4OCJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdkYjE5MjNkMDNjNGVmNGU5ZjZlODcyYzVhNmFkMjU3OGIxYWZmMmIyODFmYmMzZmZhNzQ2NmM4MjVmYjkifX19
-        - name:&f&lEye
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Sushi roll\"}"},SkullOwner:{Id:[I;-1605282217,620186788,-1655450671,-2093300258],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTc5ZTQxYzE0NmI5NTQ5Nzg2YmRiNzEzOGYzNDlmZDdjMzk1MjkwMWY4N2NhOWMyMjU4OWNhMmFlNjQ4OCJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 16
-  skull_chicken:
+  skull_tropical_fruit:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzY1YmRhNzgyYjRlZDJiYzk1YmYzOTJlMTAyZWUyZjQzNjMzZmUyZWQ5MGQ4ZmIyMDIyMTc2NjcxY2FmZGI2MiJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDViNGUyMjI5ZGU5NGMxNWRiZmNmMmJhZTQ5ZTgwZjBlNGQ2NTkxNGE0OWEzMTJjMDQxNzkyOWEyOWJiNyJ9fX0=
-        - name:&f&lChicken
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Tropical Fruit\"}"},SkullOwner:{Id:[I;-568022754,-1312603899,-1855659853,-1896359824],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzY1YmRhNzgyYjRlZDJiYzk1YmYzOTJlMTAyZWUyZjQzNjMzZmUyZWQ5MGQ4ZmIyMDIyMTc2NjcxY2FmZGI2MiJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 17
-  skull_bookcase:
+  skull_rainbow_cake:
     MenuItem:
-      - '%rewarditem_1%'
+      - name:&r&f&l%shopitemname%
       - lore:&8Click to get it
-    RewardType: item
+      - amount:1
+      - type:PLAYER_HEAD
+      - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYwZmFiYjE4Y2RlYjI3NmJiZjM2OGRkOTcxOTE4YTVkYThiOTdiYjg4NjY4MzcwYWM1YzMxZmZkMGU2NGMxYyJ9fX0=
+    RewardType: COMMAND
     Reward:
-      - - type:PLAYER_HEAD
-        - customskull:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2Y2YmY5NThhYmQ3ODI5NWVlZDZmZmMyOTNiMWFhNTk1MjZlODBmNTQ5NzY4MjllYTA2ODMzN2MyZjVlOCJ9fX0=
-        - name:&f&lBookcase
+      - minecraft:give %player% minecraft:player_head{display:{Name:"{\"text\":\"Rainbow Cake\"}"},SkullOwner:{Id:[I;-274192977,1533561292,-1468687733,296047488],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYwZmFiYjE4Y2RlYjI3NmJiZjM2OGRkOTcxOTE4YTVkYThiOTdiYjg4NjY4MzcwYWM1YzMxZmZkMGU2NGMxYyJ9fX0="}]}}} 1
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
