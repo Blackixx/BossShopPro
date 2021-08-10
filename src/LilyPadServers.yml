@@ -6,23 +6,23 @@ signs:
 shop:
   EarthGame:
     MenuItem:
-      - lore:&7Click to connect!
-      - name:&aEarth Game
-      - amount:1
-      - type:BROWN_TERRACOTTA
+    - lore:&7Click to connect!
+    - name:&aEarth Game
+    - amount:1
+    - type:BROWN_TERRACOTTA
     RewardType: PLAYERCOMMAND
     Reward:
-      - server earthgame
+    - server earthgame
     PriceType: NOTHING
     Message: ''
     ExtraPermission: ''
     InventoryLocation: 2
   Creative:
     MenuItem:
-      - type:BLUE_TERRACOTTA
-      - amount:1
-      - name:&aCreative
-      - lore:&7Click to connect!
+    - type:BLUE_TERRACOTTA
+    - amount:1
+    - name:&aCreative
+    - lore:&7Click to connect!
     RewardType: PLAYERCOMMAND
     Reward: server creative
     PriceType: NOTHING
@@ -30,10 +30,10 @@ shop:
     InventoryLocation: 3
   HungerGames:
     MenuItem:
-      - type:YELLOW_TERRACOTTA
-      - amount:1
-      - name:&aHunger Games
-      - lore:&7Click to connect!
+    - type:YELLOW_TERRACOTTA
+    - amount:1
+    - name:&aHunger Games
+    - lore:&7Click to connect!
     RewardType: PLAYERCOMMAND
     Reward: server hungergames
     PriceType: NOTHING
@@ -41,10 +41,10 @@ shop:
     InventoryLocation: 4
   Survival:
     MenuItem:
-      - type:BLACK_TERRACOTTA
-      - amount:1
-      - name:&aSurvival
-      - lore:&7Click to connect!
+    - type:BLACK_TERRACOTTA
+    - amount:1
+    - name:&aSurvival
+    - lore:&7Click to connect!
     RewardType: PLAYERCOMMAND
     Reward: server survival
     PriceType: NOTHING
@@ -52,10 +52,10 @@ shop:
     InventoryLocation: 5
   PvP:
     MenuItem:
-      - type:RED_TERRACOTTA
-      - amount:1
-      - name:&aPvP
-      - lore:&7Click to connect!
+    - type:RED_TERRACOTTA
+    - amount:1
+    - name:&aPvP
+    - lore:&7Click to connect!
     RewardType: PLAYERCOMMAND
     Reward: server pvp
     PriceType: NOTHING
@@ -63,10 +63,10 @@ shop:
     InventoryLocation: 6
   Factions:
     MenuItem:
-      - type:PURPLE_TERRACOTTA
-      - amount:1
-      - name:&aFactions
-      - lore:&7Click to connect!
+    - type:PURPLE_TERRACOTTA
+    - amount:1
+    - name:&aFactions
+    - lore:&7Click to connect!
     RewardType: PLAYERCOMMAND
     Reward: server factions
     PriceType: NOTHING
@@ -74,10 +74,10 @@ shop:
     InventoryLocation: 7
   ZombieV:
     MenuItem:
-      - type:GREEN_TERRACOTTA
-      - amount:1
-      - name:&aZombieV &6&ONew!
-      - lore:&7Click to connect!
+    - type:GREEN_TERRACOTTA
+    - amount:1
+    - name:&aZombieV &6&ONew!
+    - lore:&7Click to connect!
     RewardType: PLAYERCOMMAND
     Reward: server zombiev
     PriceType: NOTHING

@@ -6,10 +6,10 @@ signs:
 shop:
   100Points:
     MenuItem:
-      - type:DIAMOND
-      - amount:1
-      - name:&6%reward%
-      - 'lore:&cPrice: %price%'
+    - type:DIAMOND
+    - amount:1
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
     RewardType: POINTS
     Reward: 100
     PriceType: MONEY
@@ -19,10 +19,10 @@ shop:
     InventoryLocation: 1
   500Points:
     MenuItem:
-      - type:DIAMOND
-      - amount:5
-      - name:&6%reward%
-      - 'lore:&cPrice: %price%'
+    - type:DIAMOND
+    - amount:5
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
     RewardType: POINTS
     Reward: 500
     PriceType: MONEY
@@ -32,10 +32,10 @@ shop:
     InventoryLocation: 2
   1000Points:
     MenuItem:
-      - type:DIAMOND
-      - amount:10
-      - name:&6%reward%
-      - 'lore:&cPrice: %price%'
+    - type:DIAMOND
+    - amount:10
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
     RewardType: POINTS
     Reward: 1000
     PriceType: MONEY
@@ -45,10 +45,10 @@ shop:
     InventoryLocation: 3
   500Money:
     MenuItem:
-      - type:EMERALD
-      - amount:5
-      - name:&6%reward%
-      - 'lore:&cPrice: %price%'
+    - type:EMERALD
+    - amount:5
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
     RewardType: MONEY
     Reward: 500
     PriceType: POINTS
@@ -58,10 +58,10 @@ shop:
     InventoryLocation: 19
   1000Money:
     MenuItem:
-      - type:EMERALD
-      - amount:10
-      - name:&6%reward%
-      - 'lore:&cPrice: %price%'
+    - type:EMERALD
+    - amount:10
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
     RewardType: MONEY
     Reward: 1000
     PriceType: POINTS
@@ -71,10 +71,10 @@ shop:
     InventoryLocation: 20
   5000Money:
     MenuItem:
-      - type:EMERALD
-      - amount:50
-      - name:&6%reward%
-      - 'lore:&cPrice: %price%'
+    - type:EMERALD
+    - amount:50
+    - name:&6%reward%
+    - 'lore:&cPrice: %price%'
     RewardType: MONEY
     Reward: 5000
     PriceType: POINTS
@@ -84,10 +84,10 @@ shop:
     InventoryLocation: 21
   Back:
     MenuItem:
-      - type:REDSTONE
-      - amount:1
-      - name:&cBack
-      - lore:&8Back to Menu
+    - type:REDSTONE
+    - amount:1
+    - name:&cBack
+    - lore:&8Back to Menu
     RewardType: SHOP
     Reward: menu
     PriceType: NOTHING

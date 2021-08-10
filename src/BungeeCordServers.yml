@@ -6,11 +6,11 @@ signs:
 shop:
   EarthGame:
     MenuItem:
-      - type:BROWN_TERRACOTTA
-      - amount:1
-      - name:&aEarth Game
-      - lore:&7Click to connect!
-      - durability:3
+    - type:BROWN_TERRACOTTA
+    - amount:1
+    - name:&aEarth Game
+    - lore:&7Click to connect!
+    - durability:3
     RewardType: BUNGEECORDSERVER
     Reward: earthgame
     PriceType: NOTHING
@@ -18,10 +18,10 @@ shop:
     InventoryLocation: 2
   Creative:
     MenuItem:
-      - type:BLUE_TERRACOTTA
-      - amount:1
-      - name:&aCreative
-      - lore:&7Click to connect!
+    - type:BLUE_TERRACOTTA
+    - amount:1
+    - name:&aCreative
+    - lore:&7Click to connect!
     RewardType: BUNGEECORDSERVER
     Reward: creative
     PriceType: NOTHING
@@ -29,10 +29,10 @@ shop:
     InventoryLocation: 3
   HungerGames:
     MenuItem:
-      - type:YELLOW_TERRACOTTA
-      - amount:1
-      - name:&aHunger Games
-      - lore:&7Click to connect!
+    - type:YELLOW_TERRACOTTA
+    - amount:1
+    - name:&aHunger Games
+    - lore:&7Click to connect!
     RewardType: BUNGEECORDSERVER
     Reward: hungergames
     PriceType: NOTHING
@@ -40,10 +40,10 @@ shop:
     InventoryLocation: 4
   Survival:
     MenuItem:
-      - type:BLACK_TERRACOTTA
-      - amount:1
-      - name:&aSurvival
-      - lore:&7Click to connect!
+    - type:BLACK_TERRACOTTA
+    - amount:1
+    - name:&aSurvival
+    - lore:&7Click to connect!
     RewardType: BUNGEECORDSERVER
     Reward: survival
     PriceType: NOTHING
@@ -51,10 +51,10 @@ shop:
     InventoryLocation: 5
   PvP:
     MenuItem:
-      - type:RED_TERRACOTTA
-      - amount:1
-      - name:&aPvP
-      - lore:&7Click to connect!
+    - type:RED_TERRACOTTA
+    - amount:1
+    - name:&aPvP
+    - lore:&7Click to connect!
     RewardType: BUNGEECORDSERVER
     Reward: pvp
     PriceType: NOTHING
@@ -62,10 +62,10 @@ shop:
     InventoryLocation: 6
   Factions:
     MenuItem:
-      - type:PURPLE_TERRACOTTA
-      - amount:1
-      - name:&aFactions
-      - lore:&7Click to connect!
+    - type:PURPLE_TERRACOTTA
+    - amount:1
+    - name:&aFactions
+    - lore:&7Click to connect!
     RewardType: BUNGEECORDSERVER
     Reward: factions
     PriceType: NOTHING
@@ -73,10 +73,10 @@ shop:
     InventoryLocation: 7
   ZombieV:
     MenuItem:
-      - type:GREEN_TERRACOTTA
-      - amount:1
-      - name:&aZombieV &6&ONew!
-      - lore:&7Click to connect!
+    - type:GREEN_TERRACOTTA
+    - amount:1
+    - name:&aZombieV &6&ONew!
+    - lore:&7Click to connect!
     RewardType: BUNGEECORDSERVER
     Reward: zombiev
     PriceType: NOTHING

@@ -33,24 +33,24 @@ items:
     Reward: previous
     PriceType: nothing
     MenuItem:
-      - type:ARROW
-      - amount:1
-      - name:&f&lPrevious
-      - 'lore:&7Go back to the previous page.'
+    - type:ARROW
+    - amount:1
+    - name:&f&lPrevious
+    - 'lore:&7Go back to the previous page.'
     Message: ''
     InventoryLocation: 46
     ExtraPermission: ''
     Condition:
-      - type:page
-      - over:1
+    - type:page
+    - over:1
   Menu:
     RewardType: shop
     Reward: menu
     PriceType: nothing
     MenuItem:
-      - type:CHEST
-      - name:&9&l&nMenu
-      - 'lore:&7Go back to the main Menu.'
+    - type:CHEST
+    - name:&9&l&nMenu
+    - 'lore:&7Go back to the main Menu.'
     Message: ''
     InventoryLocation: 50
     ExtraPermission: ''
@@ -59,13 +59,13 @@ items:
     Reward: next
     PriceType: nothing
     MenuItem:
-      - type:ARROW
-      - amount:1
-      - name:&f&lNext
-      - 'lore:&7Open the next page.'
+    - type:ARROW
+    - amount:1
+    - name:&f&lNext
+    - 'lore:&7Open the next page.'
     Message: ''
     InventoryLocation: 54
     ExtraPermission: ''
     Condition:
-      - type:page
-      - under:%maxpage%
+    - type:page
+    - under:%maxpage%

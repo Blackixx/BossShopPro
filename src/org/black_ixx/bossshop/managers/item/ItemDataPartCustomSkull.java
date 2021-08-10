@@ -12,6 +12,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -24,22 +26,18 @@ public class ItemDataPartCustomSkull extends ItemDataPart {
             return i;
         }
 
-        ItemMeta skullMeta = i.getItemMeta();
-        GameProfile profile = new GameProfile(UUID.randomUUID(), null);
-
-        Property property = input.contains("http://textures.minecraft.net/texture") ? getPropertyURL(input) : getProperty(input);
+        String URL = "https://textures.minecraft.net/texture";
+        SkullMeta skullMeta = (SkullMeta) i.getItemMeta();
+        GameProfile profile = new GameProfile(UUID.nameUUIDFromBytes(URL.getBytes()), null);
+        Property property = input.contains(URL) ? getPropertyURL(input) : getProperty(input);
         profile.getProperties().put("textures", property);
-        Field profileField = null;
+
         try {
-            profileField = skullMeta.getClass().getDeclaredField("profile");
-        } catch (NoSuchFieldException | SecurityException e) {
-            e.printStackTrace();
-        }
-        profileField.setAccessible(true);
-        try {
-            profileField.set(skullMeta, profile);
-        } catch (IllegalArgumentException | IllegalAccessException e) {
-            e.printStackTrace();
+            Method mtd = skullMeta.getClass().getDeclaredMethod("setProfile", GameProfile.class);
+            mtd.setAccessible(true);
+            mtd.invoke(skullMeta, profile);
+        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException ex) {
+            ex.printStackTrace();
         }
         i.setItemMeta(skullMeta);
         return i;
