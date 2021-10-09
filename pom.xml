@@ -37,6 +37,11 @@
 			<id>repo</id>
 			<url>https://repo.glaremasters.me/repository/public/</url>
 		</repository>
+        	<!-- VotingPlugin Repo -->
+        	<repository>
+           		<id>BenCodez Repo</id>
+            		<url>https://nexus.bencodez.com/repository/maven-public/</url>
+        	</repository>
 		<!-- Bundabrg's Repo -->
 		<repository>
 			<id>bundabrg-repo</id>
@@ -140,12 +145,12 @@
 		</dependency>
 
 		<!-- Adds voting plugin support -->
-		<dependency>
-			<groupId>com.github.Ben12345rocks</groupId>
-			<artifactId>VotingPlugin</artifactId>
-			<version>LATEST</version>
-			<scope>provided</scope>
-		</dependency>
+        	<dependency>
+            		<groupId>com.bencodez</groupId>
+            		<artifactId>votingplugin</artifactId>
+            		<version>LATEST</version>
+            		<scope>provided</scope>
+        	</dependency>
 
 		<!-- Adds command points support -->
 		<dependency>
