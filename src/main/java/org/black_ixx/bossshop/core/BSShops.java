@@ -194,7 +194,9 @@ public class BSShops {
 
     ////////////////////////////////////////////////////////////////////////////
 
-    public void refreshShops(boolean mode_serverpinging) {
+    public void refreshShops(final boolean mode_serverpinging) {
+    	Bukkit.getScheduler().runTask(ClassManager.manager.getPlugin(), () -> {
+    		
         for (Player p : Bukkit.getOnlinePlayers()) { //If players have a customizable inventory open it needs an update
             if (ClassManager.manager.getPlugin().getAPI().isValidShop(p.getOpenInventory())) {
                 Inventory open_inventory = p.getOpenInventory().getTopInventory();
@@ -212,6 +214,7 @@ public class BSShops {
                 }
             }
         }
+    	});
     }
 
 }
